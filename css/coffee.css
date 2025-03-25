@@ -1,96 +1,174 @@
 /* Styles pour la tasse de café */
 .coffee-container {
     position: relative;
-    width: 80px;
-    height: 100px;
-    margin-left: 20px;
+    width: 150px;
+    height: 200px;
+    margin-left: 25px;
+    transform: translateY(10px) scale(0.65);
+    perspective: 1000px;
 }
 
 .coffee-cup {
     position: relative;
-    width: 60px;
-    height: 80px;
-    background: linear-gradient(to right, #c53030, #e53e3e);
-    border-radius: 5px 5px 20px 20px;
-    transform: rotateY(-20deg);
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    height: 200px;
+    width: 180px;
+    margin: auto;
+    transform: rotateY(-15deg);
+    transform-style: preserve-3d;
+    background: linear-gradient(to right, #f0f0f0 0, white 100%);
+    background-color: white;
+    border-top-left-radius: 90px 40px;
+    border-top-right-radius: 90px 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Base circulaire de la tasse */
+.coffee-cup:before {
+    content: "";
+    position: absolute;
+    height: 70px;
+    width: 180px;
+    bottom: -35px;
+    border-radius: 50%;
+    background: linear-gradient(to right, #f0f0f0 0, white 100%);
+    background-color: white;
+}
+
+/* Reflet dans la tasse */
+.coffee-cup:after {
+    content: "";
+    position: absolute;
+    height: 50px;
+    width: 160px;
+    top: 10px;
+    left: 10px;
+    border-radius: 50%;
+    background: linear-gradient(to top, #eee 0, silver 100%);
+    box-shadow: 0 0 15px #eee;
 }
 
 /* Poignée de la tasse */
-.coffee-cup::before {
-    content: '';
+.coffee-handle {
     position: absolute;
-    width: 20px;
-    height: 30px;
-    border-radius: 10px;
-    border: 5px solid #c53030;
-    right: -15px;
-    top: 15px;
+    height: 133px;
+    width: 80px;
+    top: 40px;
+    right: -80px;
+    border-top-right-radius: 75px 70px;
+    border-bottom-right-radius: 75px 70px;
+    border-top-left-radius: 50% 20px;
+    border-bottom-left-radius: 50% 20px;
+    background: linear-gradient(to left, #f0f0f0 0, white 100%);
+    background-color: white;
+    transform: rotateY(20deg);
 }
 
-/* Bord et contenu de la tasse */
-.coffee-cup::after {
-    content: '';
+/* Creux de la poignée */
+.coffee-handle:after {
+    content: "";
     position: absolute;
-    width: 50px;
-    height: 10px;
-    background: #61dafb;
-    /* Couleur React pour le café */
-    border-radius: 5px;
-    left: 5px;
+    height: 90px;
+    width: 58px;
+    top: 22px;
+    left: 0;
+    border-top-right-radius: 45px 45px;
+    border-bottom-right-radius: 45px 45px;
+    border-top-left-radius: 45px 25px;
+    border-bottom-left-radius: 45px 25px;
+    background: #0c1221;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenu de la tasse (café) */
+.coffee-content {
+    position: absolute;
     top: 10px;
+    left: 15px;
+    width: 150px;
+    height: 30px;
+    background: #6F4E37;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    z-index: 2;
+    box-shadow: 0 0 10px rgba(111, 78, 55, 0.5);
+    opacity: 0.9;
+}
+
+/* Logo React sur la tasse */
+.coffee-logo {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 75px;
+    left: 70px;
+    background-image: url('../img/react-logo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    z-index: 5;
+    animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /* Animation de la vapeur */
 .steam {
     position: absolute;
-    top: -15px;
-    left: 15px;
-    width: 30px;
-    height: 40px;
+    top: 5px;
+    left: 60px;
+    width: 60px;
+    height: 60px;
     animation: steamAnimation 3s infinite ease-in-out;
-    opacity: 0.7;
+    opacity: 0.8;
+    z-index: 5;
 }
 
 @keyframes steamAnimation {
 
     0%,
     100% {
-        opacity: 0.3;
+        opacity: 0.4;
         transform: translateY(0) scale(1);
     }
 
     50% {
-        opacity: 0.7;
+        opacity: 0.8;
         transform: translateY(-10px) scale(1.2);
     }
 }
 
 .steam-particle {
     position: absolute;
-    width: 8px;
-    height: 8px;
-    background: rgba(255, 255, 255, 0.3);
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.6);
     border-radius: 50%;
-    filter: blur(3px);
+    filter: blur(4px);
 }
 
 .steam-particle:nth-child(1) {
     top: 0;
-    left: 5px;
+    left: 10px;
     animation: float 4s infinite ease-in-out;
 }
 
 .steam-particle:nth-child(2) {
     top: 10px;
-    left: 15px;
-    animation: float 3s infinite ease-in-out 0.5s;
+    left: 30px;
+    animation: float 3.5s infinite ease-in-out 0.5s;
 }
 
 .steam-particle:nth-child(3) {
     top: 5px;
-    left: 22px;
-    animation: float 3.5s infinite ease-in-out 1s;
+    left: 45px;
+    animation: float 3s infinite ease-in-out 1s;
 }
 
 @keyframes float {
@@ -101,20 +179,7 @@
     }
 
     50% {
-        transform: translateY(-15px) scale(1.8);
+        transform: translateY(-20px) scale(2);
         opacity: 0;
     }
-}
-
-/* Logo React sur la tasse */
-.coffee-logo {
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    top: 30px;
-    left: 18px;
-    background-image: url('../img/react-logo.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0.8;
 }
