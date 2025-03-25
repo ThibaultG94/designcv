@@ -1,0 +1,66 @@
+/* Styles généraux de la page */
+body {
+    background-color: #0c1221;
+    color: #e6e6e6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Container de l'espace de travail */
+.workspace-container {
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1400px;
+    padding: 50px 30px;
+    margin-top: 20px;
+}
+
+/* Animation d'apparition */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+    opacity: 0;
+}
+
+/* Styles pour le code */
+.code {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+}
+
+/* Texte coloré pour le code */
+.text-blue-400 {
+    color: #60a5fa;
+}
+
+.text-green-400 {
+    color: #34d399;
+}
+
+.text-orange-400 {
+    color: #fb923c;
+}
+
+.text-yellow-400 {
+    color: #facc15;
+}
+
+.text-cyan-400 {
+    color: #22d3ee;
+}
+
+.text-purple-400 {
+    color: #c084fc;
+}

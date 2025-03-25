@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Développeur - Workspace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Styles principaux -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Styles spécifiques par élément -->
+    <link rel="stylesheet" href="css/laptop.css">
+    <link rel="stylesheet" href="css/photo.css">
+    <link rel="stylesheet" href="css/coffee.css">
+    <link rel="stylesheet" href="css/sections.css">
+</head>
+
+<body class="min-h-screen">
+    <!-- Section centrale avec le laptop -->
+    <div class="flex justify-center items-center flex-col mt-10">
+        <div class="workspace-container flex justify-center items-center gap-6">
+            <!-- Photo Frame (à gauche) avec support visible -->
+            <div class="photo-frame-container fade-in" style="animation-delay: 0.2s;">
+                <div class="frame-stand"></div>
+                <div class="photo-frame">
+                    <div class="frame-back"></div>
+                    <div class="frame-front">
+                        <img src="img/profile.jpg" alt="Photo de profil" class="profile-image">
+                        <div class="frame-glass"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Laptop (au centre) -->
+            <div class="laptop-container">
+                <div class="laptop fade-in" style="animation-delay: 0.4s;">
+                    <div class="laptop-screen">
+                        <!-- Code React avec informations personnelles -->
+                        <div class="code text-left">
+                            <div class="mb-1"><span class="text-blue-400">import</span> <span
+                                    class="text-green-400">React</span> <span class="text-blue-400">from</span> <span
+                                    class="text-orange-400">'react'</span>;</div>
+
+                            <div class="mb-1"><span class="text-blue-400">const</span> <span
+                                    class="text-green-400">Developer</span> = <span class="text-yellow-400">()</span> =>
+                                {
+                            </div>
+
+                            <div class="ml-4 mb-1"><span class="text-blue-400">const</span> <span
+                                    class="text-cyan-400">profile</span> = {</div>
+                            <div class="ml-8 mb-1"><span class="text-cyan-400">name</span>: <span
+                                    class="text-orange-400">"Jean Albert"</span>,</div>
+                            <div class="ml-8 mb-1"><span class="text-cyan-400">role</span>: <span
+                                    class="text-orange-400">"Développeur Front-end"</span>,</div>
+                            <div class="ml-8 mb-1"><span class="text-cyan-400">skills</span>: [<span
+                                    class="text-orange-400">"React"</span>, <span
+                                    class="text-orange-400">"JavaScript"</span>,
+                                <span class="text-orange-400">"Node.js"</span>, <span
+                                    class="text-orange-400">"Tailwind"</span>],
+                            </div>
+                            <div class="ml-8 mb-1"><span class="text-cyan-400">passion</span>: <span
+                                    class="text-orange-400">"Créer des interfaces modernes et intuitives"</span></div>
+                            <div class="ml-4 mb-1">};</div>
+
+                            <div class="ml-4 mb-1"><span class="text-blue-400">return</span> (</div>
+                            <div class="ml-8 mb-1"><span class="text-purple-400">&lt;div</span> <span
+                                    class="text-cyan-400">className</span>=<span
+                                    class="text-orange-400">"profile"</span><span class="text-purple-400">&gt;</span>
+                            </div>
+                            <div class="ml-12 mb-1">// Informations et sections du CV</div>
+                            <div class="ml-8 mb-1"><span class="text-purple-400">&lt;/div&gt;</span></div>
+                            <div class="ml-4 mb-1">);</div>
+                            <div class="mb-1">};</div>
+
+                            <div class="mb-1"><span class="text-blue-400">export</span> <span
+                                    class="text-blue-400">default</span> <span class="text-green-400">Developer</span>;
+                            </div>
+                        </div>
+                    </div>
+                    <div class="laptop-base">
+                        <div class="laptop-keyboard"></div>
+                        <div class="laptop-touchpad"></div>
+                        <div class="laptop-hinge"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tasse de café avec vapeur -->
+            <div class="coffee-container fade-in" style="animation-delay: 0.6s;">
+                <div class="coffee-cup">
+                    <div class="steam">
+                        <div class="steam-particle"></div>
+                        <div class="steam-particle"></div>
+                        <div class="steam-particle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sections du CV -->
+    <div class="container mx-auto px-4 pb-10">
+        <!-- Compétences -->
+        <div class="cv-section" style="--delay: 1">
+            <h2 class="text-xl font-bold mb-4">Compétences</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <p class="mb-2 flex justify-between">
+                        <span>React</span>
+                        <span>85%</span>
+                    </p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+
+                    <p class="mb-2 flex justify-between">
+                        <span>JavaScript</span>
+                        <span>90%</span>
+                    </p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+
+                    <p class="mb-2 flex justify-between">
+                        <span>Tailwind CSS</span>
+                        <span>80%</span>
+                    </p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <p class="mb-2 flex justify-between">
+                        <span>Node.js</span>
+                        <span>75%</span>
+                    </p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%"></div>
+                    </div>
+
+                    <p class="mb-2 flex justify-between">
+                        <span>Express</span>
+                        <span>70%</span>
+                    </p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 70%"></div>
+                    </div>
+
+                    <p class="mb-2 flex justify-between">
+                        <span>Git</span>
+                        <span>85%</span>
+                    </p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projets -->
+        <div class="cv-section" style="--delay: 2">
+            <h2 class="text-xl font-bold mb-4">Projets</h2>
+            <div class="project-card">
+                <h3 class="text-lg font-semibold">Application de gestion de tâches</h3>
+                <p>Application web permettant de créer et gérer des listes de tâches avec des fonctionnalités de
+                    filtrage et de recherche avancées.</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Redux</span>
+                    <span class="tech-tag">Tailwind CSS</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3 class="text-lg font-semibold">Dashboard météo</h3>
+                <p>Interface utilisateur affichant les données météorologiques en temps réel pour plusieurs villes avec
+                    visualisations graphiques.</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">API OpenWeatherMap</span>
+                    <span class="tech-tag">Chart.js</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3 class="text-lg font-semibold">API de gestion d'événements</h3>
+                <p>Backend pour une application de gestion d'événements avec authentification et bases de données.</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Express</span>
+                    <span class="tech-tag">MongoDB</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formation -->
+        <div class="cv-section" style="--delay: 3">
+            <h2 class="text-xl font-bold mb-4">Formation</h2>
+            <div class="mb-4">
+                <h3 class="text-lg font-semibold">Développeur Front-end React</h3>
+                <p class="text-sm text-gray-400">Autodidacte | 2022 - Présent</p>
+                <p class="mt-2">Formation complète en développement web front-end à travers diverses ressources en
+                    ligne, création de projets personnels et participation à des communautés de développeurs.</p>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold">Certifications</h3>
+                <ul class="list-disc ml-5 mt-2">
+                    <li>React - The Complete Guide (Udemy)</li>
+                    <li>JavaScript Algorithms and Data Structures (freeCodeCamp)</li>
+                    <li>Responsive Web Design (freeCodeCamp)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="cv-section" style="--delay: 4">
+            <h2 class="text-xl font-bold mb-4">Contact</h2>
+            <div class="flex flex-col md:flex-row gap-6">
+                <div class="flex-1">
+                    <p class="mb-2">
+                        <span class="font-semibold">Email:</span> jean.albert@example.com
+                    </p>
+                    <p class="mb-2">
+                        <span class="font-semibold">Téléphone:</span> +33 6 12 34 56 78
+                    </p>
+                    <p class="mb-2">
+                        <span class="font-semibold">Localisation:</span> Paris, France
+                    </p>
+                </div>
+                <div class="flex-1">
+                    <p class="mb-2">
+                        <span class="font-semibold">LinkedIn:</span>
+                        <a href="#" class="text-blue-400 hover:underline ml-1">linkedin.com/in/jean-albert</a>
+                    </p>
+                    <p class="mb-2">
+                        <span class="font-semibold">GitHub:</span>
+                        <a href="#" class="text-blue-400 hover:underline ml-1">github.com/jean-albert</a>
+                    </p>
+                    <p class="mb-2">
+                        <span class="font-semibold">Portfolio:</span>
+                        <a href="#" class="text-blue-400 hover:underline ml-1">jean-albert.dev</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Animation des barres de compétences
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialiser les barres à 0%
+            const skillBars = document.querySelectorAll('.skill-progress');
+            skillBars.forEach(bar => {
+                const targetWidth = bar.style.width;
+                bar.style.width = '0%';
+
+                // Observer pour déclencher l'animation au scroll
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            setTimeout(() => {
+                                bar.style.width = targetWidth;
+                            }, 300);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                });
+
+                observer.observe(bar);
+            });
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
