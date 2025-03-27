@@ -1,12 +1,13 @@
 /* Styles pour la souris */
 .mouse-container {
     position: absolute;
-    right: -120px;
-    bottom: -40px;
+    top: 250mm;
+    right: 20mm;
+    z-index: 30;
+    transform: scale(1.2);
     width: 90px;
     height: 150px;
     transform: rotate(-10deg) scale(0.8);
-    z-index: 1;
 }
 
 .mouse {
