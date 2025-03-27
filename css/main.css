@@ -7,13 +7,36 @@ body {
     overflow-x: hidden;
 }
 
+.a4-container {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 20mm;
+    margin: 10mm auto;
+    background-color: #0c1221;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
 /* Container de l'espace de travail */
 .workspace-container {
+    margin-top: 10mm;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    transform-style: preserve-3d;
-    perspective: 1400px;
-    padding: 50px 30px;
-    margin-top: 20px;
+}
+
+
+@media print {
+    .a4-container {
+        margin: 0;
+        box-shadow: none;
+        width: 210mm;
+        height: 297mm;
+        page-break-after: always;
+    }
 }
 
 /* Animation d'apparition */

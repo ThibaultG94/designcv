@@ -12,97 +12,120 @@
     <link rel="stylesheet" href="css/laptop.css">
     <link rel="stylesheet" href="css/photo.css">
     <link rel="stylesheet" href="css/coffee.css">
+    <link rel="stylesheet" href="css/mouse.css">
     <link rel="stylesheet" href="css/sections.css">
+    <style>
+        /* Ligne séparatrice entre le workspace et les sections */
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #61dafb, transparent);
+            margin: 30px 0;
+        }
+    </style>
 </head>
 
-<body class="min-h-screen">
-    <!-- Section centrale avec le laptop -->
-    <div class="flex justify-center items-center flex-col mt-10">
-        <div class="workspace-container flex justify-center items-center gap-6">
-            <!-- Photo Frame (à gauche) avec support visible -->
-            <div class="photo-frame-container fade-in" style="animation-delay: 0.2s;">
-                <div class="frame-stand"></div>
-                <div class="photo-frame">
-                    <div class="frame-back"></div>
-                    <div class="frame-front">
-                        <img src="img/profile.jpg" alt="Photo de profil" class="profile-image">
-                        <div class="frame-glass"></div>
-                    </div>
+<body class="bg-gray-900">
+    <div class="a4-container">
+        <!-- Photo Frame (à gauche) avec support visible -->
+        <div class="photo-frame-container fade-in" style="animation-delay: 0.2s;">
+            <div class="frame-stand"></div>
+            <div class="photo-frame">
+                <div class="frame-back"></div>
+                <div class="frame-front">
+                    <img src="img/profile.jpg" alt="Photo de profil" class="profile-image">
+                    <div class="frame-glass"></div>
                 </div>
             </div>
+        </div>
 
-            <!-- Laptop (au centre) -->
-            <div class="laptop-container">
-                <div class="laptop fade-in" style="animation-delay: 0.4s;">
-                    <div class="laptop-screen">
-                        <!-- Code React avec informations personnelles -->
-                        <div class="code text-left">
-                            <div class="mb-1"><span class="text-blue-400">import</span> <span
-                                    class="text-green-400">React</span> <span class="text-blue-400">from</span> <span
-                                    class="text-orange-400">'react'</span>;</div>
+        <!-- Laptop (au centre) -->
+        <div class="laptop-container">
+            <div class="laptop fade-in" style="animation-delay: 0.4s;">
+                <div class="laptop-screen">
+                    <!-- Code React avec informations personnelles -->
+                    <div class="code text-left">
+                        <div class="mb-1"><span class="text-blue-400">import</span> <span
+                                class="text-green-400">React</span> <span class="text-blue-400">from</span> <span
+                                class="text-orange-400">'react'</span>;</div>
 
-                            <div class="mb-1"><span class="text-blue-400">const</span> <span
-                                    class="text-green-400">Developer</span> = <span class="text-yellow-400">()</span> =>
-                                {
-                            </div>
+                        <div class="mb-1"><span class="text-blue-400">const</span> <span
+                                class="text-green-400">Developer</span> = <span class="text-yellow-400">()</span> =>
+                            {
+                        </div>
 
-                            <div class="ml-4 mb-1"><span class="text-blue-400">const</span> <span
-                                    class="text-cyan-400">profile</span> = {</div>
-                            <div class="ml-8 mb-1"><span class="text-cyan-400">name</span>: <span
-                                    class="text-orange-400">"Jean Albert"</span>,</div>
-                            <div class="ml-8 mb-1"><span class="text-cyan-400">role</span>: <span
-                                    class="text-orange-400">"Développeur Front-end"</span>,</div>
-                            <div class="ml-8 mb-1"><span class="text-cyan-400">skills</span>: [<span
-                                    class="text-orange-400">"React"</span>, <span
-                                    class="text-orange-400">"JavaScript"</span>,
-                                <span class="text-orange-400">"Node.js"</span>, <span
-                                    class="text-orange-400">"Tailwind"</span>],
-                            </div>
-                            <div class="ml-8 mb-1"><span class="text-cyan-400">passion</span>: <span
-                                    class="text-orange-400">"Créer des interfaces modernes et intuitives"</span></div>
-                            <div class="ml-4 mb-1">};</div>
+                        <div class="ml-4 mb-1"><span class="text-blue-400">const</span> <span
+                                class="text-cyan-400">profile</span> = {</div>
+                        <div class="ml-8 mb-1"><span class="text-cyan-400">name</span>: <span
+                                class="text-orange-400">"Jean Albert"</span>,</div>
+                        <div class="ml-8 mb-1"><span class="text-cyan-400">role</span>: <span
+                                class="text-orange-400">"Développeur Front-end"</span>,</div>
+                        <div class="ml-8 mb-1"><span class="text-cyan-400">skills</span>: [<span
+                                class="text-orange-400">"React"</span>, <span
+                                class="text-orange-400">"JavaScript"</span>,
+                            <span class="text-orange-400">"Node.js"</span>, <span
+                                class="text-orange-400">"Tailwind"</span>],
+                        </div>
+                        <div class="ml-8 mb-1"><span class="text-cyan-400">passion</span>: <span
+                                class="text-orange-400">"Créer des interfaces modernes et intuitives"</span></div>
+                        <div class="ml-4 mb-1">};</div>
 
-                            <div class="ml-4 mb-1"><span class="text-blue-400">return</span> (</div>
-                            <div class="ml-8 mb-1"><span class="text-purple-400">&lt;div</span> <span
-                                    class="text-cyan-400">className</span>=<span
-                                    class="text-orange-400">"profile"</span><span class="text-purple-400">&gt;</span>
-                            </div>
-                            <div class="ml-12 mb-1">// Informations et sections du CV</div>
-                            <div class="ml-8 mb-1"><span class="text-purple-400">&lt;/div&gt;</span></div>
-                            <div class="ml-4 mb-1">);</div>
-                            <div class="mb-1">};</div>
+                        <div class="ml-4 mb-1"><span class="text-blue-400">return</span> (</div>
+                        <div class="ml-8 mb-1"><span class="text-purple-400">&lt;div</span> <span
+                                class="text-cyan-400">className</span>=<span
+                                class="text-orange-400">"profile"</span><span class="text-purple-400">&gt;</span>
+                        </div>
+                        <div class="ml-12 mb-1">// Informations et sections du CV</div>
+                        <div class="ml-8 mb-1"><span class="text-purple-400">&lt;/div&gt;</span></div>
+                        <div class="ml-4 mb-1">);</div>
+                        <div class="mb-1">};</div>
 
-                            <div class="mb-1"><span class="text-blue-400">export</span> <span
-                                    class="text-blue-400">default</span> <span class="text-green-400">Developer</span>;
-                            </div>
+                        <div class="mb-1"><span class="text-blue-400">export</span> <span
+                                class="text-blue-400">default</span> <span class="text-green-400">Developer</span>;
                         </div>
                     </div>
-                    <div class="laptop-base">
-                        <div class="laptop-keyboard"></div>
-                        <div class="laptop-touchpad"></div>
-                        <div class="laptop-hinge"></div>
-                    </div>
+                </div>
+                <div class="laptop-base">
+                    <div class="laptop-keyboard"></div>
+                    <div class="laptop-touchpad"></div>
+                    <div class="laptop-hinge"></div>
                 </div>
             </div>
+        </div>
 
-            <!-- Tasse de café avec vapeur -->
-            <div class="coffee-container fade-in" style="animation-delay: 0.6s;">
-                <div class="coffee-cup">
-                    <div class="coffee-handle"></div>
-                    <div class="coffee-content"></div>
-                    <div class="coffee-logo"></div>
-                    <div class="steam">
-                        <div class="steam-particle"></div>
-                        <div class="steam-particle"></div>
-                        <div class="steam-particle"></div>
-                    </div>
+        <!-- Tasse de café avec vapeur -->
+        <div class="coffee-container fade-in" style="animation-delay: 0.6s;">
+            <div class="coffee-cup">
+                <div class="coffee-handle"></div>
+                <div class="coffee-content"></div>
+                <div class="coffee-logo"></div>
+                <div class="steam">
+                    <div class="steam-particle"></div>
+                    <div class="steam-particle"></div>
+                    <div class="steam-particle"></div>
                 </div>
+            </div>
+        </div>
+
+        <!-- Souris avec logos technos -->
+        <div class="mouse-container fade-in" style="animation-delay: 0.8s;">
+            <div class="mouse">
+                <div class="mouse-button-left"></div>
+                <div class="mouse-button-right"></div>
+                <div class="mouse-wheel"></div>
+                <div class="mouse-cable"></div>
+                <div class="html-logo">H</div>
+                <div class="js-logo">JS</div>
+                <div class="css-logo">C</div>
             </div>
         </div>
     </div>
 
+    <!-- Séparateur -->
+    <div class="divider"></div>
+
     <!-- Sections du CV -->
-    <div class="container mx-auto px-4 pb-10">
+    <div class="cv-content">
         <!-- Compétences -->
         <div class="cv-section" style="--delay: 1">
             <h2 class="text-xl font-bold mb-4">Compétences</h2>
@@ -177,8 +200,8 @@
 
             <div class="project-card">
                 <h3 class="text-lg font-semibold">Dashboard météo</h3>
-                <p>Interface utilisateur affichant les données météorologiques en temps réel pour plusieurs villes avec
-                    visualisations graphiques.</p>
+                <p>Interface utilisateur affichant les données météorologiques en temps réel pour plusieurs villes
+                    avec visualisations graphiques.</p>
                 <div class="tech-tags">
                     <span class="tech-tag">React</span>
                     <span class="tech-tag">API OpenWeatherMap</span>
@@ -188,7 +211,8 @@
 
             <div class="project-card">
                 <h3 class="text-lg font-semibold">API de gestion d'événements</h3>
-                <p>Backend pour une application de gestion d'événements avec authentification et bases de données.</p>
+                <p>Backend pour une application de gestion d'événements avec authentification et bases de données.
+                </p>
                 <div class="tech-tags">
                     <span class="tech-tag">Node.js</span>
                     <span class="tech-tag">Express</span>
@@ -250,31 +274,7 @@
         </div>
     </div>
 
-    <script>
-        // Animation des barres de compétences
-        document.addEventListener('DOMContentLoaded', function () {
-            // Initialiser les barres à 0%
-            const skillBars = document.querySelectorAll('.skill-progress');
-            skillBars.forEach(bar => {
-                const targetWidth = bar.style.width;
-                bar.style.width = '0%';
-
-                // Observer pour déclencher l'animation au scroll
-                const observer = new IntersectionObserver(entries => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            setTimeout(() => {
-                                bar.style.width = targetWidth;
-                            }, 300);
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                });
-
-                observer.observe(bar);
-            });
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
