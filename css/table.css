@@ -1,0 +1,58 @@
+.wooden-table {
+    position: absolute;
+    bottom: 0;
+    left: -400px;
+    right: -400px;
+    height: 1200px;
+    /* Transformation with perspective to create depth effect */
+    transform: perspective(800px) rotateX(40deg);
+    transform-origin: bottom center;
+    background: linear-gradient(to bottom, #8B5A2B, #A0522D);
+    z-index: 1;
+    /* Place under other elements */
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Wood texture */
+.wooden-table::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        repeating-linear-gradient(90deg,
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.1) 2px,
+            transparent 2px,
+            transparent 20px);
+    opacity: 0.7;
+}
+
+/* Table edge */
+.wooden-table::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 15px;
+    background-color: #6B4226;
+    transform: translateY(-50%);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Reflection on table surface */
+.table-reflection {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    bottom: 20%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), transparent);
+    border-radius: 50% / 20%;
+    transform: rotateX(60deg) scale(1, 0.6);
+    opacity: 0.3;
+    pointer-events: none;
+}
