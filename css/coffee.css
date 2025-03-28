@@ -1,3 +1,4 @@
+/* Styles pour la tasse de café avec poignée améliorée */
 .coffee-container {
     position: absolute;
     top: 230mm;
@@ -36,6 +37,8 @@
     border-radius: 50%;
     background: linear-gradient(to right, #f0f0f0 0, white 100%);
     background-color: white;
+    z-index: 2;
+    /* Assure que la base est au-dessus de la table */
 }
 
 /* Reflet dans la tasse */
@@ -51,7 +54,7 @@
     box-shadow: 0 0 15px #eee;
 }
 
-/* Poignée de la tasse */
+/* Poignée de la tasse - méthode avec superposition d'éléments */
 .coffee-handle {
     position: absolute;
     height: 133px;
@@ -65,11 +68,11 @@
     background: linear-gradient(to left, #f0f0f0 0, white 100%);
     background-color: white;
     transform: rotateY(20deg);
+    z-index: 1;
 }
 
-/* Creux de la poignée */
-.coffee-handle:after {
-    content: "";
+/* Nouvelle solution pour le creux de la poignée - Nous créons un élément qui cache le fond */
+.coffee-handle-hole {
     position: absolute;
     height: 90px;
     width: 58px;
@@ -79,8 +82,26 @@
     border-bottom-right-radius: 45px 45px;
     border-top-left-radius: 45px 25px;
     border-bottom-left-radius: 45px 25px;
-    background: #0c1221;
-    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.2);
+    background: white;
+    /* Même couleur que le fond général */
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
+    /* Ombre intérieure pour donner du relief */
+    z-index: 2;
+}
+
+/* Élément qui imite le bois de la table dans le creux de la poignée */
+.coffee-handle-hole:after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    border-radius: inherit;
+    background: linear-gradient(to bottom, #8B5A2B, #A0522D);
+    /* Couleur du bois */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+    z-index: -1;
 }
 
 /* Contenu de la tasse (café) - Modifié pour être ovale */
