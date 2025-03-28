@@ -2,7 +2,7 @@
     position: absolute;
     top: 70mm;
     left: 50%;
-    transform: translateX(-50%) scale(0.82);
+    transform: translateX(-50%) scale(0.85);
     z-index: 20;
     transform-style: preserve-3d;
     width: 100%;
@@ -36,38 +36,85 @@
 }
 
 /* Clavier visible et concret, pas juste des lignes */
+/* Styles pour le clavier Dell réaliste */
 .laptop-keyboard {
     position: absolute;
-    bottom: -230px;
+    bottom: -220px;
     left: 0;
     right: 0;
-    height: 230px;
+    height: 220px;
     background: #111111;
     border-radius: 0 0 8px 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    padding: 8px;
+    padding: 12px 15px;
     z-index: 2;
     transform-style: preserve-3d;
-    transform: rotateX(10deg);
+    transform: rotateX(5deg);
     transform-origin: top center;
 }
 
-/* Touches réelles du clavier */
+/* Organisation du clavier plus réaliste - inspiré du Dell de la photo */
 .keyboard-keys {
     display: grid;
-    grid-template-columns: repeat(15, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     gap: 4px;
-    height: 80px;
+    height: 170px;
     width: 100%;
     margin-bottom: 12px;
+}
+
+/* Première rangée - touches de fonction */
+.keyboard-row-1 {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+/* Deuxième rangée - chiffres */
+.keyboard-row-2 {
+    display: grid;
+    grid-template-columns: 1fr repeat(12, 1fr) 2fr;
+    gap: 4px;
+    margin-bottom: 4px;
+}
+
+/* Troisième rangée - QWERTY première ligne */
+.keyboard-row-3 {
+    display: grid;
+    grid-template-columns: 1.5fr repeat(12, 1fr) 1.5fr;
+    gap: 4px;
+    margin-bottom: 4px;
+}
+
+/* Quatrième rangée - ASDF */
+.keyboard-row-4 {
+    display: grid;
+    grid-template-columns: 1.8fr repeat(11, 1fr) 2.2fr;
+    gap: 4px;
+    margin-bottom: 4px;
+}
+
+/* Cinquième rangée - ZXCV */
+.keyboard-row-5 {
+    display: grid;
+    grid-template-columns: 2.2fr repeat(10, 1fr) 2.8fr 1fr;
+    gap: 4px;
+    margin-bottom: 4px;
+}
+
+/* Sixième rangée - espace et touches spéciales */
+.keyboard-row-6 {
+    display: grid;
+    grid-template-columns: 1.3fr 1.3fr 1.3fr 1.3fr 6fr 1.3fr 1.3fr 1fr 1fr 1fr;
+    gap: 4px;
 }
 
 .keyboard-key {
     background: #222222;
     border-radius: 3px;
     color: rgba(255, 255, 255, 0.8);
-    font-size: 6px;
+    font-size: 7px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,40 +129,71 @@
     height: 100%;
 }
 
-.key-wide-1 {
-    grid-column: span 2;
+/* Touches spéciales, similaires au Dell */
+.keyboard-key.key-esc {
+    font-size: 6px;
 }
 
-.key-wide-15 {
-    grid-column: span 1.5;
+.keyboard-key.key-fn {
+    background: linear-gradient(to bottom, #333333, #222222);
 }
 
-.key-enter {
-    grid-column: span 2;
-    grid-row: span 2;
-    border-radius: 0 3px 3px 0;
+/* Touches de technologies */
+.key-react {
+    background: linear-gradient(to bottom, #222222, #1a1a1a);
+    border-top: 1px solid #61dafb;
+    color: #61dafb;
 }
 
+.key-js {
+    background: linear-gradient(to bottom, #222222, #1a1a1a);
+    border-top: 1px solid #f7df1e;
+    color: #f7df1e;
+}
 
-.keyboard-spacebar {
-    grid-column: 4 / 12;
-    background: #222222;
+.key-node {
+    background: linear-gradient(to bottom, #222222, #1a1a1a);
+    border-top: 1px solid #68a063;
+    color: #68a063;
+}
+
+.key-html {
+    background: linear-gradient(to bottom, #222222, #1a1a1a);
+    border-top: 1px solid #e34c26;
+    color: #e34c26;
+}
+
+.key-css {
+    background: linear-gradient(to bottom, #222222, #1a1a1a);
+    border-top: 1px solid #264de4;
+    color: #264de4;
+}
+
+.key-tw {
+    background: linear-gradient(to bottom, #222222, #1a1a1a);
+    border-top: 1px solid #06b6d4;
+    color: #06b6d4;
+}
+
+/* Barre d'espace */
+.key-space {
+    background: #1d1d1d;
     border-radius: 3px;
-    height: 100%;
     box-shadow:
         0 1px 1px rgba(0, 0, 0, 0.7),
         0 1px 0 rgba(255, 255, 255, 0.05) inset;
     border: 1px solid #000000;
 }
 
+/* Touchpad */
 .laptop-touchpad {
     position: absolute;
     width: 40%;
-    height: 40px;
+    height: 45px;
     background: #1a1a1a;
     border: 1px solid #000000;
     border-radius: 1px;
-    bottom: 15px;
+    bottom: 12px;
     left: 50%;
     transform: translateX(-50%);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) inset;
@@ -127,7 +205,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 10px;
+    height: 12px;
     display: flex;
 }
 
@@ -146,29 +224,34 @@
 /* Logo Dell */
 .dell-logo {
     position: absolute;
-    top: 10px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    color: #888;
+    color: #666;
     font-size: 8px;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
-/* Lumières d'état du clavier */
-.keyboard-lights {
-    position: absolute;
-    top: 5px;
-    right: 20px;
-    display: flex;
-    gap: 5px;
+/* Effet hover sur les touches */
+.keyboard-key:hover {
+    background: #2a2a2a;
+    transform: translateY(1px);
+    box-shadow:
+        0 0px 0px rgba(0, 0, 0, 0.7),
+        0 1px 0 rgba(255, 255, 255, 0.05) inset;
+    transition: all 0.1s ease;
 }
 
-.keyboard-light {
-    width: 3px;
-    height: 3px;
-    background: #444;
-    border-radius: 50%;
+/* Technos qui brillent au survol */
+.key-react:hover,
+.key-js:hover,
+.key-node:hover,
+.key-html:hover,
+.key-css:hover,
+.key-tw:hover {
+    box-shadow: 0 0 5px currentColor;
+    transition: all 0.2s ease;
 }
 
 /* Ombre simplifiée */
