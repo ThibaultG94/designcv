@@ -13,7 +13,7 @@
     box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Wood texture */
+/* Wood texture - Lignes espacées pour éviter la poignée de la tasse */
 .wooden-table::before {
     content: '';
     position: absolute;
@@ -26,7 +26,8 @@
             rgba(0, 0, 0, 0.1),
             rgba(0, 0, 0, 0.1) 2px,
             transparent 2px,
-            transparent 20px);
+            transparent 60px);
+    /* Espacé de 50px au lieu de 20px */
     opacity: 0.7;
 }
 
