@@ -6,11 +6,10 @@
     height: 1200px;
     transform: perspective(800px) rotateX(40deg);
     transform-origin: bottom center;
-    /* background-color: linear-gradient(to bottom, #8B5A2B, #A0522D); */
-    background-color: #A0522D;
+    background-color: #96562C;
     background-image: url("https://www.transparenttextures.com/patterns/wood.png");
     z-index: 1;
-    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Wood texture - Spaced lines to avoid cup handle */
@@ -23,9 +22,9 @@
     bottom: 0;
     background-image:
         repeating-linear-gradient(90deg,
-            rgba(0, 0, 0, 0.1),
-            rgba(0, 0, 0, 0.1) 2px,
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2) 2px,
             transparent 2px,
             transparent 60px);
-    opacity: 0.7;
+    opacity: 0.8;
 }
