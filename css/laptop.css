@@ -17,26 +17,22 @@
     margin: 0 auto;
 }
 
-/* Écran du laptop avec contre-rotation simplifiée */
+/* Laptop screen with simplified counter-rotation */
 .laptop-screen {
     background-color: #1a1f2c;
     border-radius: 8px 8px 0 0;
     border: 15px solid #090909;
     padding: 0px;
     aspect-ratio: 16/10;
-    /* Proportion plus réaliste */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) inset;
     position: relative;
     transform-style: preserve-3d;
-    /* Contre-rotation pour lisibilité */
     transform: rotateX(-35deg) translateZ(5px);
     transform-origin: bottom center;
     overflow: hidden;
     z-index: 1;
 }
 
-/* Clavier visible et concret, pas juste des lignes */
-/* Styles pour le clavier Dell réaliste */
 .laptop-keyboard {
     position: absolute;
     bottom: -220px;
@@ -53,7 +49,6 @@
     transform-origin: top center;
 }
 
-/* Organisation du clavier plus réaliste - inspiré du Dell de la photo */
 .keyboard-keys {
     display: grid;
     grid-template-rows: repeat(6, 1fr);
@@ -63,7 +58,7 @@
     margin-bottom: 12px;
 }
 
-/* Première rangée - touches de fonction */
+/* First row - function keys */
 .keyboard-row-1 {
     display: grid;
     grid-template-columns: repeat(15, 1fr);
@@ -71,7 +66,7 @@
     margin-bottom: 8px;
 }
 
-/* Deuxième rangée - chiffres */
+/* Second row - numbers */
 .keyboard-row-2 {
     display: grid;
     grid-template-columns: 1fr repeat(12, 1fr) 2fr;
@@ -79,7 +74,7 @@
     margin-bottom: 4px;
 }
 
-/* Troisième rangée - QWERTY première ligne */
+/* Third row - QWERTY first line */
 .keyboard-row-3 {
     display: grid;
     grid-template-columns: 1.5fr repeat(12, 1fr) 1.5fr;
@@ -87,7 +82,7 @@
     margin-bottom: 4px;
 }
 
-/* Quatrième rangée - ASDF */
+/* Fourth row - ASDF */
 .keyboard-row-4 {
     display: grid;
     grid-template-columns: 1.8fr repeat(11, 1fr) 2.2fr;
@@ -95,7 +90,7 @@
     margin-bottom: 4px;
 }
 
-/* Cinquième rangée - ZXCV */
+/* Fifth row - ZXCV */
 .keyboard-row-5 {
     display: grid;
     grid-template-columns: 2.2fr repeat(10, 1fr) 2.8fr 1fr;
@@ -103,7 +98,7 @@
     margin-bottom: 4px;
 }
 
-/* Sixième rangée - espace et touches spéciales */
+/* Sixth row - space and special keys */
 .keyboard-row-6 {
     display: grid;
     grid-template-columns: 1.3fr 1.3fr 1.3fr 1.3fr 6fr 1.3fr 1.3fr 1fr 1fr 1fr;
@@ -129,7 +124,7 @@
     height: 100%;
 }
 
-/* Touches spéciales, similaires au Dell */
+/* Special keys */
 .keyboard-key.key-esc {
     font-size: 6px;
 }
@@ -138,7 +133,7 @@
     background: linear-gradient(to bottom, #333333, #222222);
 }
 
-/* Touches de technologies */
+/* Technology keys */
 .key-react {
     background: linear-gradient(to bottom, #222222, #1a1a1a);
     border-top: 1px solid #61dafb;
@@ -175,7 +170,6 @@
     color: #06b6d4;
 }
 
-/* Barre d'espace */
 .key-space {
     background: #1d1d1d;
     border-radius: 3px;
@@ -221,19 +215,6 @@
     border-right: 1px solid #111;
 }
 
-/* Logo Dell */
-.dell-logo {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #666;
-    font-size: 8px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-/* Effet hover sur les touches */
 .keyboard-key:hover {
     background: #2a2a2a;
     transform: translateY(1px);
@@ -243,7 +224,7 @@
     transition: all 0.1s ease;
 }
 
-/* Technos qui brillent au survol */
+/* Technos that shine in the sky */
 .key-react:hover,
 .key-js:hover,
 .key-node:hover,
@@ -254,7 +235,7 @@
     transition: all 0.2s ease;
 }
 
-/* Ombre simplifiée */
+/* Simplified shadow */
 .laptop__shadow {
     position: absolute;
     right: -10%;

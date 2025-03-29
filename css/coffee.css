@@ -26,7 +26,7 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Base circulaire de la tasse */
+/* Circular cup base */
 .coffee-cup:before {
     content: "";
     position: absolute;
@@ -39,7 +39,7 @@
     z-index: 2;
 }
 
-/* Reflet dans la tasse */
+/* Reflection in the cup */
 .coffee-cup:after {
     content: "";
     position: absolute;
@@ -52,7 +52,6 @@
     box-shadow: 0 0 15px #eee;
 }
 
-/* Poignée de la tasse - méthode avec superposition d'éléments */
 .coffee-handle {
     position: absolute;
     height: 133px;
@@ -69,7 +68,6 @@
     z-index: 1;
 }
 
-/* Nouvelle solution pour le creux de la poignée - Nous créons un élément qui cache le fond */
 .coffee-handle-hole {
     position: absolute;
     height: 90px;
@@ -81,13 +79,11 @@
     border-top-left-radius: 45px 25px;
     border-bottom-left-radius: 45px 25px;
     background: white;
-    /* Même couleur que le fond général */
     box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
-    /* Ombre intérieure pour donner du relief */
     z-index: 2;
 }
 
-/* Élément qui imite le bois de la table dans le creux de la poignée */
+/* Element imitating table wood in the handle recess */
 .coffee-handle-hole:after {
     content: "";
     position: absolute;
@@ -98,12 +94,10 @@
     border-radius: inherit;
     background-color: #A0522D;
     background-image: url("https://www.transparenttextures.com/patterns/wood.png");
-    /* Couleur du bois */
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
     z-index: -1;
 }
 
-/* Contenu de la tasse (café) - Modifié pour être ovale */
 .coffee-content {
     position: absolute;
     top: 13px;
@@ -117,7 +111,6 @@
     opacity: 0.9;
 }
 
-/* Logo React sur la tasse - Agrandi et centré */
 .coffee-logo {
     position: absolute;
     width: 120px;
@@ -131,14 +124,13 @@
     z-index: 5;
 }
 
-/* Animation de la vapeur - Plus haute et plus visible */
+/* Steam animation */
 .steam {
     position: absolute;
     top: -10px;
     left: 60px;
     width: 60px;
     height: 80px;
-    /* Augmentée pour monter plus haut */
     opacity: 0.8;
     z-index: 5;
 }

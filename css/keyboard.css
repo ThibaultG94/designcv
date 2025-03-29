@@ -1,31 +1,20 @@
-/* Styles pour le clavier avec inclinaison extrême */
+/* Styles for keyboards with extreme inclination */
 .keyboard {
     background: linear-gradient(to bottom, #34404f, #1e2533);
     border-radius: 15px 15px 5px 5px;
-    /* Très asymétrique */
     padding: 30px 25px 10px 25px;
-    /* Beaucoup plus de padding en haut */
     box-shadow:
         0 10px 30px rgba(0, 0, 0, 0.8),
         0 1px 2px rgba(255, 255, 255, 0.1) inset;
-    /* Transformation EXTRÊME pour l'effet 3D */
     transform:
-        perspective(600px) rotateX(60deg)
-        /* Inclinaison beaucoup plus forte */
-        scale3d(1.69, 0.55, 0.25)
-        /* Compression verticale massive */
-        translateZ(40px) translateY(-20px);
-    /* Décalage vers le haut */
+        perspective(600px) rotateX(60deg) scale3d(1.69, 0.55, 0.25) translateZ(40px) translateY(-20px);
     transform-origin: center top;
-    /* Pivot depuis le haut */
     transform-style: preserve-3d;
     transition: transform 0.3s ease;
     max-width: 650px;
     margin: 100px auto 0;
-    /* Beaucoup plus d'espace */
     position: relative;
     height: 280px;
-    /* Hauteur fixe pour améliorer la déformation */
 }
 
 .keyboard:hover {
@@ -33,7 +22,7 @@
         perspective(600px) rotateX(57deg) scale3d(1, 0.55, 1) translateZ(40px) translateY(-20px);
 }
 
-/* Ombre intense sous le clavier */
+/* Intense shadow under the keyboard */
 .keyboard::after {
     content: '';
     position: absolute;
@@ -47,17 +36,16 @@
     z-index: -1;
 }
 
-/* Rangées avec espacement extrême et scaling variable */
+/* Rows with extreme spacing and variable scaling */
 .keyboard-row {
     display: flex;
     justify-content: center;
     margin-bottom: 25px;
-    /* Espacement très grand */
     transform-style: preserve-3d;
     position: relative;
 }
 
-/* Scaling extrême pour chaque rangée - effet trapézoïdal prononcé */
+/* Extreme scaling for each row - pronounced trapezoidal effect */
 .keyboard-row:nth-child(1) {
     transform: translateZ(50px) scale(1.1, 1.1);
     margin-bottom: 30px;
@@ -87,13 +75,12 @@
     transform: translateZ(0px) scale(0.85, 0.8);
 }
 
-/* Touches avec effet 3D extrême */
+/* Keys with extreme 3D effect */
 .key {
     width: 40px;
     height: 40px;
     margin: 0 5px;
     border-radius: 7px 7px 3px 3px;
-    /* Asymétrique pour renforcer la perspective */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -101,23 +88,18 @@
     background: linear-gradient(to bottom, #454e5f, #303642);
     box-shadow:
         0 8px 0 #1a1f28,
-        /* Ombre plus prononcée */
         0 10px 10px rgba(0, 0, 0, 0.4);
     transition: all 0.15s;
     border-top: 2px solid rgba(255, 255, 255, 0.2);
-    /* Bord lumineux en haut */
     border-left: 1px solid rgba(255, 255, 255, 0.1);
     border-right: 1px solid rgba(0, 0, 0, 0.3);
     border-bottom: 2px solid rgba(0, 0, 0, 0.4);
-    /* Bord sombre en bas */
     position: relative;
     transform-style: preserve-3d;
     color: #e6e6e6;
     transform: translateZ(5px);
-    /* Toutes les touches sortent légèrement */
 }
 
-/* Effet 3D encore plus prononcé sur chaque touche */
 .key::before {
     content: '';
     position: absolute;
@@ -125,7 +107,6 @@
     left: 0;
     right: 0;
     height: 50%;
-    /* Seulement sur la moitié supérieure */
     background: linear-gradient(to bottom,
             rgba(255, 255, 255, 0.15) 0%,
             rgba(255, 255, 255, 0) 100%);
@@ -147,7 +128,7 @@
         0 2px 3px rgba(0, 0, 0, 0.4);
 }
 
-/* Espace entre les touches variable selon la rangée */
+/* Spacing between keys varies according to row */
 .keyboard-row:nth-child(1) .key {
     margin: 0 7px;
 }
@@ -172,17 +153,15 @@
     margin: 0 2px;
 }
 
-/* Barre d'espace massive et très courbée */
+/* Massive, highly curved space bar */
 .space-key {
     width: 350px;
-    /* Énorme */
     border-radius: 30px;
     background: linear-gradient(to bottom, #3a4351, #252b36);
     transform: translateZ(0);
-    /* Plus enfoncée que les autres touches */
 }
 
-/* Touches spéciales/technologies avec couleurs éclatantes */
+/* Special keys/technologies with brilliant colors */
 .html-key {
     background: linear-gradient(to bottom, #e34c26, #b83b1e);
     color: #fff;
@@ -247,7 +226,7 @@
         0 10px 10px rgba(0, 0, 0, 0.4);
 }
 
-/* Lueur intense autour des touches techno au survol */
+/* Intense glow around techno keys on flyover */
 .react-key:hover,
 .js-key:hover,
 .html-key:hover,
@@ -260,10 +239,9 @@
         0 4px 0 #1a1f28,
         0 6px 5px rgba(0, 0, 0, 0.4),
         0 0 20px currentColor;
-    /* Lueur plus intense */
 }
 
-/* Renforcement de l'effet trapézoïdal pour tout le clavier */
+/* Enhanced trapezoidal effect for the entire keyboardEnhanced trapezoidal effect for the entire keyboard */
 .keyboard::before {
     content: '';
     position: absolute;

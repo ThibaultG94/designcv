@@ -4,18 +4,16 @@
     left: -400px;
     right: -400px;
     height: 1200px;
-    /* Transformation with perspective to create depth effect */
     transform: perspective(800px) rotateX(40deg);
     transform-origin: bottom center;
     /* background-color: linear-gradient(to bottom, #8B5A2B, #A0522D); */
     background-color: #A0522D;
     background-image: url("https://www.transparenttextures.com/patterns/wood.png");
     z-index: 1;
-    /* Place under other elements */
     box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Wood texture - Lignes espacées pour éviter la poignée de la tasse */
+/* Wood texture - Spaced lines to avoid cup handle */
 .wooden-table::before {
     content: '';
     position: absolute;
