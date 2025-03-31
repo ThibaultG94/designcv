@@ -1,4 +1,3 @@
-/* Styles pour les logos de technologies sur la souris */
 .mouse-container {
     position: absolute;
     top: 245mm;
@@ -25,7 +24,6 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Logos de technologies avec perspective */
 .tech-logo {
     position: absolute;
     background-size: contain;
@@ -34,7 +32,6 @@
     z-index: 10;
 }
 
-/* Logo HTML sur le dessus de la souris */
 .html-logo {
     height: 40px;
     width: 40px;
@@ -44,7 +41,6 @@
     opacity: 0.75;
 }
 
-/* Logo JavaScript sur le bouton gauche */
 .js-logo {
     top: 12px;
     left: 5px;
@@ -54,7 +50,6 @@
     opacity: 0.75;
 }
 
-/* Logo CSS sur le bouton droit */
 .css-logo {
     top: 12px;
     right: 3px;
@@ -117,13 +112,6 @@
 .mouse-button-right {
     right: 0;
     border-left: 1px solid rgba(0, 0, 0, 0.3);
-}
-
-/* Effet de clic pour les boutons */
-.mouse-button-left:hover .js-logo,
-.mouse-button-right:hover .css-logo {
-    transform: perspective(130px) rotateX(45deg) rotateY(0deg) rotateZ(-10deg) translateY(2px);
-    transition: transform 0.1s ease;
 }
 
 /* Bottom part of the mouse - subtly curved */
