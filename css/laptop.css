@@ -179,7 +179,7 @@
 /* Touchpad */
 .laptop-touchpad {
     position: absolute;
-    width: 40%;
+    width: 25%;
     height: 45px;
     background: #1a1a1a;
     border: 1px solid #000000;
@@ -189,6 +189,7 @@
     transform: translateX(-50%);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) inset;
     z-index: 3;
+    overflow: hidden;
 }
 
 .touchpad-buttons {
@@ -210,6 +211,38 @@
 
 .touchpad-button-left {
     border-right: 1px solid #111;
+}
+
+.touchpad-logo {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: 40%;
+    height: 40%;
+    background-image: url('../img/tailwind-css.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.75;
+    z-index: 1;
+}
+
+.touchpad-shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to bottom,
+            rgba(255, 255, 255, 0.05) 0%,
+            rgba(255, 255, 255, 0) 100%);
+    z-index: 2;
+}
+
+.laptop-touchpad:hover .touchpad-logo {
+    opacity: 1;
+    transition: opacity 0.3s ease;
 }
 
 /* Simplified shadow */
