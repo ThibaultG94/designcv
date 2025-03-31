@@ -1,7 +1,7 @@
 .coffee-container {
     position: absolute;
     top: 235mm;
-    left: 20%;
+    left: 15%;
     z-index: 15;
     width: 150px;
     height: 200px;

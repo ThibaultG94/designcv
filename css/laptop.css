@@ -1,8 +1,8 @@
 .laptop-container {
     position: absolute;
-    top: 70mm;
+    top: 60mm;
     left: 50%;
-    transform: translateX(-50%) scale(0.85);
+    transform: translateX(-50%) scale(0.7);
     z-index: 20;
     transform-style: preserve-3d;
     width: 100%;
