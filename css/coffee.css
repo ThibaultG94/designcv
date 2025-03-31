@@ -136,10 +136,10 @@
 /* React logo */
 .coffee-logo {
     position: absolute;
-    width: 120px;
-    height: 120px;
-    top: 100px;
-    left: 35px;
+    width: 140px;
+    height: 140px;
+    top: 90px;
+    left: 23px;
     background-image: url('../img/react-logo.svg');
     background-size: contain;
     background-repeat: no-repeat;
