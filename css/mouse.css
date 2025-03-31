@@ -1,3 +1,4 @@
+/* Styles pour les logos de technologies sur la souris */
 .mouse-container {
     position: absolute;
     top: 245mm;
@@ -22,6 +23,45 @@
     transform-style: preserve-3d;
     transform: perspective(130px) rotateX(45deg) rotateY(0deg) rotateZ(-10deg) translateZ(0px);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Logos de technologies avec perspective */
+.tech-logo {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10;
+}
+
+/* Logo HTML sur le dessus de la souris */
+.html-logo {
+    height: 40px;
+    width: 40px;
+    top: 58px;
+    left: 23%;
+    background-image: url('../img/html.png');
+    opacity: 0.75;
+}
+
+/* Logo JavaScript sur le bouton gauche */
+.js-logo {
+    top: 12px;
+    left: 5px;
+    height: 25px;
+    width: 25px;
+    background-image: url('../img/js.png');
+    opacity: 0.75;
+}
+
+/* Logo CSS sur le bouton droit */
+.css-logo {
+    top: 12px;
+    right: 3px;
+    height: 27px;
+    width: 27px;
+    background-image: url('../img/css.png');
+    opacity: 0.75;
 }
 
 .mouse-wheel {
@@ -79,6 +119,13 @@
     border-left: 1px solid rgba(0, 0, 0, 0.3);
 }
 
+/* Effet de clic pour les boutons */
+.mouse-button-left:hover .js-logo,
+.mouse-button-right:hover .css-logo {
+    transform: perspective(130px) rotateX(45deg) rotateY(0deg) rotateZ(-10deg) translateY(2px);
+    transition: transform 0.1s ease;
+}
+
 /* Bottom part of the mouse - subtly curved */
 .mouse-bottom {
     position: absolute;
@@ -104,4 +151,21 @@
     box-shadow: 0 0 8px #4caf50;
     opacity: 0.7;
     animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.7;
+        box-shadow: 0 0 8px #4caf50;
+    }
+
+    50% {
+        opacity: 0.9;
+        box-shadow: 0 0 12px #4caf50;
+    }
+
+    100% {
+        opacity: 0.7;
+        box-shadow: 0 0 8px #4caf50;
+    }
 }
