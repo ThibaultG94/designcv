@@ -49,7 +49,7 @@
                         <div class="ml-4 mb-1"><span class="text-blue-400">const</span> <span
                                 class="text-cyan-400">profile</span> = {</div>
                         <div class="ml-8 mb-1"><span class="text-cyan-400">name</span>: <span
-                                class="text-orange-400">"Jean Albert"</span>,</div>
+                                class="text-orange-400 fullname-span">""</span>,</div>
                         <div class="ml-8 mb-1"><span class="text-cyan-400">role</span>: <span
                                 class="text-orange-400">"Développeur Front-end"</span>,</div>
                         <div class="ml-8 mb-1"><span class="text-cyan-400">skills</span>: [<span
@@ -358,17 +358,17 @@
                 <div class="pin pin-2"></div>
                 <div class="sticky-note-title">CONTACT</div>
                 <div class="sticky-note-content">
-                    <div class="contact-link">contact@jeanalbert.com</div>
-                    <div class="contact-link">06 24 55 00 17</div>
-                    <div class="contact-link">Paris, France</div>
+                    <div class="contact-link">contact@<span id="email"></span>.com</div>
+                    <div class="contact-link" id="phone"></div>
+                    <div class="contact-link"><span id="location"></span>, France</div>
                 </div>
             </div>
             <div class="sticky-note sticky-note-2">
                 <div class="pin pin-3"></div>
                 <div class="sticky-note-title">LIENS</div>
                 <div class="sticky-note-content">
-                    <div class="contact-link">github.com/JeanA94</div>
-                    <div class="contact-link">linkedin.com/in/jean-a-10b37a271/</div>
+                    <div class="contact-link">github.com/<span id="github"></span>94</div>
+                    <div class="contact-link">linkedin.com/in/<span id="linkedIn"></span>-10b37a271/</div>
                     <div class="contact-link">jeanalbert.com</div>
                 </div>
             </div>
@@ -389,7 +389,7 @@
 
         <div class="title-banner-container">
             <div class="title-banner">
-                <div class="title-name">Jean Albert</div>
+                <div class="title-name fullname-span"></div>
                 <div class="title-role">Développeur React</div>
             </div>
         </div>
@@ -399,7 +399,7 @@
         </div>
     </div>
 
-    <script src="js/main.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
