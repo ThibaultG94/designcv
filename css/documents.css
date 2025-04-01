@@ -101,41 +101,43 @@
 .sticky-notes-container {
     position: absolute;
     top: 50mm;
-    right: 55%;
+    left: 30%;
     z-index: 18;
     transform-style: preserve-3d;
 }
 
 .sticky-note {
     position: absolute;
-    width: 155px;
-    height: 90px;
-    background-color: #fca5a5;
+    width: 180px;
+    height: 120px;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
     padding: 10px;
     color: #1a202c;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 11px;
     transform-style: preserve-3d;
 }
 
 .sticky-note-1 {
     background-color: #fca5a5;
+    background-image: url("https://www.transparenttextures.com/patterns/paper.png");
+    transform: perspective(800px) rotateZ(-3deg);
 }
 
 .sticky-note-2 {
     background-color: #93c5fd;
+    background-image: url("https://www.transparenttextures.com/patterns/paper.png");
+    transform: perspective(800px) rotateZ(5deg) translateX(185px) translateZ(-5px);
 }
 
 .sticky-note-title {
     font-weight: bold;
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 5px;
     text-align: center;
 }
 
 .sticky-note-content {
-    font-size: 10px;
+    font-size: 12px;
     line-height: 1.3;
 }
 
