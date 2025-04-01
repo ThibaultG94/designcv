@@ -100,8 +100,8 @@
 /* Notes papillon collantes pour les liens et contact */
 .sticky-notes-container {
     position: absolute;
-    top: 20mm;
-    right: 50mm;
+    top: 50mm;
+    right: 55%;
     z-index: 18;
     transform-style: preserve-3d;
 }
@@ -158,7 +158,7 @@
 .wall-postit-container {
     position: absolute;
     top: 10mm;
-    left: 100mm;
+    right: 47mm;
     z-index: 15;
 }
 
