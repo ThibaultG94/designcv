@@ -115,23 +115,47 @@
     color: #1a202c;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transform-style: preserve-3d;
+    transition: all 0.3s ease;
 }
 
 .sticky-note-1 {
     background-color: #fca5a5;
     background-image: url("https://www.transparenttextures.com/patterns/paper.png");
-    transform: perspective(800px) rotateZ(-3deg);
+    transform: perspective(800px) rotateX(5deg) rotateZ(-3deg);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), 0 0 1px rgba(0, 0, 0, 0.1) inset;
 }
 
 .sticky-note-2 {
     background-color: #93c5fd;
     background-image: url("https://www.transparenttextures.com/patterns/paper.png");
-    transform: perspective(800px) rotateZ(5deg) translateX(185px) translateZ(-5px);
+    transform: perspective(800px) rotateX(5deg) rotateZ(5deg) translateX(185px) translateZ(-5px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), 0 0 1px rgba(0, 0, 0, 0.1) inset;
+}
+
+.sticky-note::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(45deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0) 80%,
+            rgba(255, 255, 255, 0.1) 100%);
+    pointer-events: none;
+}
+
+.sticky-note .pin+.pin+.sticky-note-title {
+    margin-top: 5px;
 }
 
 .sticky-note-title {
     font-weight: bold;
-    font-size: 14px;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    padding-left: 7px;
+    margin-top: 1px;
     margin-bottom: 5px;
     text-align: center;
 }
@@ -198,4 +222,63 @@
     background-color: #d97706;
     border-radius: 50%;
     margin-right: 5px;
+}
+
+/* Punaises pour les sticky notes */
+.pin {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    z-index: 19;
+    transform-style: preserve-3d;
+}
+
+/* Punaise avec tête et tige */
+.pin::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.2) 100%);
+    z-index: 1;
+}
+
+/* Ombre de la punaise */
+.pin::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    filter: blur(1px);
+}
+
+/* Specific bugs for each note */
+.pin-1 {
+    top: 8px;
+    left: 10px;
+    background-color: #ef4444;
+    transform: translateZ(1px);
+}
+
+.pin-2 {
+    top: 7px;
+    right: 20px;
+    background-color: #ef4444;
+    transform: translateZ(1px);
+}
+
+.pin-3 {
+    top: 3px;
+    left: 45%;
+    transform: translateX(-50%) translateZ(1px);
+    background-color: #3b82f6;
 }
