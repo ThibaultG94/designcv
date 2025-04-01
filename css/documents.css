@@ -108,14 +108,13 @@
 
 .sticky-note {
     position: absolute;
-    width: 180px;
-    height: 120px;
+    width: 185px;
+    height: 130px;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
     padding: 10px;
     color: #1a202c;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transform-style: preserve-3d;
-    transition: all 0.3s ease;
 }
 
 .sticky-note-1 {
@@ -161,7 +160,7 @@
 }
 
 .sticky-note-content {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.3;
 }
 
@@ -180,23 +179,57 @@
     color: #4b5563;
 }
 
-/* Post-it mural pour les compétences */
+/* Wall Post-it for skills */
 .wall-postit-container {
     position: absolute;
     top: 10mm;
     right: 47mm;
     z-index: 15;
+    transform-style: preserve-3d;
+    perspective: 800px;
 }
 
 .wall-postit {
     position: absolute;
     width: 150px;
-    height: 170px;
+    height: 190px;
     background-color: #fde68a;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    background-image: url("https://www.transparenttextures.com/patterns/paper-2.png");
+    box-shadow: 1px 4px 12px rgba(0, 0, 0, 0.5), 0 0 2px rgba(0, 0, 0, 0.1) inset;
     padding: 15px;
     color: #1a202c;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transform: perspective(1000px) rotateX(2deg);
+    transition: all 0.3s ease;
+}
+
+/* Slightly curled paper effect */
+.wall-postit::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0) 75%,
+            rgba(255, 255, 255, 0.1) 100%);
+    pointer-events: none;
+}
+
+/* Slight texture on the bottom of the post-it */
+.wall-postit::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: linear-gradient(to bottom,
+            rgba(253, 230, 138, 0) 0%,
+            rgba(227, 207, 124, 0.2) 100%);
+    z-index: -1;
 }
 
 .wall-postit-title {
@@ -209,7 +242,7 @@
 }
 
 .skill-item {
-    font-size: 11px;
+    font-size: 14px;
     margin-bottom: 5px;
     display: flex;
     align-items: center;
@@ -224,7 +257,7 @@
     margin-right: 5px;
 }
 
-/* Punaises pour les sticky notes */
+/* Sticky notes bugs */
 .pin {
     position: absolute;
     width: 10px;
@@ -235,7 +268,7 @@
     transform-style: preserve-3d;
 }
 
-/* Punaise avec tête et tige */
+/* Bug with head and stem */
 .pin::before {
     content: "";
     position: absolute;
@@ -248,7 +281,7 @@
     z-index: 1;
 }
 
-/* Ombre de la punaise */
+/* Shadow of the bedbug */
 .pin::after {
     content: "";
     position: absolute;
@@ -281,4 +314,18 @@
     left: 45%;
     transform: translateX(-50%) translateZ(1px);
     background-color: #3b82f6;
+}
+
+.pin-4 {
+    top: 5px;
+    left: 10%;
+    transform: translateX(-50%) translateZ(1px);
+    background-color: #fde68a;
+}
+
+.pin-5 {
+    top: 5px;
+    right: 5%;
+    transform: translateX(-50%) translateZ(1px);
+    background-color: #fde68a;
 }

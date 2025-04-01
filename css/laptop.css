@@ -3,7 +3,7 @@
     top: 60mm;
     left: 50%;
     transform: translateX(-50%) scale(0.7);
-    z-index: 20;
+    z-index: 30;
     transform-style: preserve-3d;
     width: 100%;
     height: 100%;
