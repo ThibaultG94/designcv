@@ -1,10 +1,10 @@
 .notebook-container {
     position: absolute;
-    top: 222mm;
+    top: 220mm;
     right: 30%;
     z-index: 15;
-    width: 180px;
-    height: 270px;
+    width: 380px;
+    height: 300px;
     transform-style: preserve-3d;
     perspective: 1000px;
 }
@@ -19,7 +19,7 @@
 }
 
 .notebook:hover {
-    transform: perspective(1000px) rotateX(55deg) rotateZ(-5deg);
+    transform: perspective(1000px) rotateX(45deg) rotateZ(-5deg);
 }
 
 .notebook-cover {
@@ -37,46 +37,116 @@
 
 .notebook-spine {
     position: absolute;
-    left: 0;
+    left: 50%;
     top: 0;
-    width: 20px;
+    width: 16px;
     height: 100%;
     background-color: #1a202c;
-    z-index: 2;
+    transform: translateX(-50%);
+    box-shadow:
+        -3px 0 5px rgba(0, 0, 0, 0.2),
+        3px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 5;
 }
 
-.notebook-page {
+/* Reliure avec anneaux */
+.notebook-ring {
+    position: absolute;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    background: #d1d5db;
+    border-radius: 50%;
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    transform: translateX(-50%);
+    z-index: 6;
+}
+
+/* Création des anneaux */
+.notebook-ring:nth-child(1) {
+    top: 10%;
+}
+
+.notebook-ring:nth-child(2) {
+    top: 25%;
+}
+
+.notebook-ring:nth-child(3) {
+    top: 40%;
+}
+
+.notebook-ring:nth-child(4) {
+    top: 55%;
+}
+
+.notebook-ring:nth-child(5) {
+    top: 70%;
+}
+
+.notebook-ring:nth-child(6) {
+    top: 85%;
+}
+
+/* Page gauche */
+.notebook-page-left {
     position: absolute;
     top: 10px;
-    right: 10px;
-    width: 90%;
+    left: 10px;
+    width: calc(50% - 15px);
     height: 90%;
     background-color: #f8fafc;
     background-image: url("https://www.transparenttextures.com/patterns/lined-paper-2.png");
-    /* background-size: 20px 20px; */
-    border-radius: 2px;
+    border-radius: 2px 0 0 2px;
     padding: 20px;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.1);
     transform: translateZ(2px);
-    z-index: 10;
+    z-index: 3;
     overflow: hidden;
     color: #2d3748;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 14px;
 }
 
+/* Page droite */
+.notebook-page-right {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: calc(50% - 15px);
+    height: 90%;
+    background-color: #f8fafc;
+    background-image: url("https://www.transparenttextures.com/patterns/lined-paper-2.png");
+    border-radius: 0 2px 2px 0;
+    padding: 20px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    transform: translateZ(2px);
+    z-index: 3;
+    overflow: hidden;
+    color: #2d3748;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+}
+
+/* Style pour les titres */
 .notebook-title {
+    font-family: 'Caveat', cursive;
+    /* Utiliser une police manuscrite */
     font-weight: bold;
     margin-bottom: 15px;
     text-align: center;
     color: #4a5568;
     border-bottom: 2px solid #60a5fa;
     padding-bottom: 5px;
+    font-size: 16px;
 }
 
 .experience-item {
     margin-bottom: 15px;
     position: relative;
+    font-family: 'Caveat', cursive;
+    /* Police manuscrite pour le contenu */
+    font-size: 16px;
+    /* Taille augmentée pour meilleure lisibilité */
 }
 
 .experience-strikethrough {
@@ -93,7 +163,34 @@
     display: inline-block;
 }
 
-/* Post-its for skills/training */
+/* Style mis à jour pour les compétences ou sections */
+.notebook-section {
+    margin-bottom: 10px;
+}
+
+.notebook-section-title {
+    font-family: 'Caveat', cursive;
+    font-weight: bold;
+    color: #4a5568;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.notebook-section-item {
+    font-family: 'Caveat', cursive;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    position: relative;
+}
+
+.notebook-section-item::before {
+    content: "•";
+    position: absolute;
+    left: -10px;
+}
+
+/* Post-its pour les compétences/formations */
 .post-it {
     position: absolute;
     width: 80px;
@@ -101,7 +198,7 @@
     background-color: #faf089;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
     padding: 10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Caveat', cursive;
     font-size: 12px;
     color: #2d3748;
     transform-style: preserve-3d;
@@ -110,19 +207,19 @@
 
 .post-it-1 {
     top: -40px;
-    right: -20px;
+    right: 20px;
     background-color: #9ae6b4;
 }
 
 .post-it-2 {
     top: -20px;
-    right: 40px;
+    right: 80px;
     background-color: #fbd38d;
 }
 
 .post-it-3 {
     bottom: -30px;
-    left: -10px;
+    left: 45px;
     background-color: #90cdf4;
 }
 
@@ -137,17 +234,7 @@
     font-size: 9px;
 }
 
-/* Separator ribbon in the notebook */
-.notebook-divider {
-    position: absolute;
-    bottom: 15%;
-    left: -10px;
-    width: 110%;
-    height: 2px;
-    background-color: #e2e8f0;
-}
-
-/* Tabs on the side of the notebook */
+/* Onglets sur le côté du carnet */
 .notebook-tabs {
     position: absolute;
     top: 0;
@@ -179,4 +266,26 @@
 .notebook-tab-3 {
     top: 65%;
     background-color: #68d391;
+}
+
+/* Effet de page légèrement courbée */
+.notebook-page-left::after,
+.notebook-page-right::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.03) 100%);
+    z-index: 4;
+}
+
+.notebook-page-left::after {
+    right: 0;
+}
+
+.notebook-page-right::after {
+    left: 0;
 }
