@@ -1,7 +1,7 @@
 .coffee-container {
     position: absolute;
-    top: 235mm;
-    left: 5%;
+    top: 155mm;
+    right: 4%;
     z-index: 15;
     width: 150px;
     height: 200px;
@@ -14,7 +14,7 @@
     width: 180px;
     margin: auto;
     transform-style: preserve-3d;
-    transform: perspective(600px) rotateX(-10deg) rotateY(0deg) scale(.8) translateZ(10px);
+    transform: perspective(600px) rotateX(-10deg) rotateY(0deg) scale(.58) translateZ(10px);
     background-color: #f0fcff;
     background-image: url("https://www.transparenttextures.com/patterns/light-aluminum.png");
     border-top-left-radius: 90px 40px;
@@ -34,7 +34,6 @@
     background-color: #f0fcff;
     background-image: url("https://www.transparenttextures.com/patterns/light-aluminum.png");
     z-index: 2;
-    box-shadow: 0 12px 15px rgba(0, 0, 0, 0.15);
 }
 
 /* Reflection in the cup */
