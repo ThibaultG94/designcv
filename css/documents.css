@@ -198,7 +198,8 @@
     box-shadow: 1px 4px 12px rgba(0, 0, 0, 0.5), 0 0 2px rgba(0, 0, 0, 0.1) inset;
     padding: 15px;
     color: #1a202c;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Caveat', cursive;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     transform: perspective(1000px) rotateX(2deg);
     transition: all 0.3s ease;
 }

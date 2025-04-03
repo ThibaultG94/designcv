@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/notebook.css">
     <link rel="stylesheet" href="css/documents.css">
     <link rel="stylesheet" href="css/title.css">
+    <link rel="stylesheet" href="css/postits.css">
 </head>
 
 <body class="bg-gray-700">
@@ -42,39 +43,34 @@
                                 class="text-orange-400">'react'</span>;</div>
 
                         <div class="mb-1"><span class="text-blue-400">const</span> <span
-                                class="text-green-400">Developer</span> = <span class="text-yellow-400">()</span> =>
-                            {
-                        </div>
+                                class="text-green-400">CV</span> = () => {</div>
 
                         <div class="ml-4 mb-1"><span class="text-blue-400">const</span> <span
-                                class="text-cyan-400">profile</span> = {</div>
-                        <div class="ml-8 mb-1"><span class="text-cyan-400">name</span>: <span
-                                class="text-orange-400 fullname-span">""</span>,</div>
-                        <div class="ml-8 mb-1"><span class="text-cyan-400">role</span>: <span
-                                class="text-orange-400">"Développeur Front-end"</span>,</div>
-                        <div class="ml-8 mb-1"><span class="text-cyan-400">skills</span>: [<span
+                                class="text-cyan-400">profil</span> = {</div>
+                        <div class="ml-8 mb-1"><span class="text-cyan-400">nom</span>: <span
+                                class="text-orange-400">"Jean Albert"</span>,</div>
+                        <div class="ml-8 mb-1"><span class="text-cyan-400">poste</span>: <span class="text-orange-400">
+                                "Développeur Front-end React"</span>,</div>
+                        <div class="ml-8 mb-1"><span class="text-cyan-400">compétences</span>: [ <span
                                 class="text-orange-400">"React"</span>, <span
-                                class="text-orange-400">"JavaScript"</span>,
-                            <span class="text-orange-400">"Node.js"</span>, <span
-                                class="text-orange-400">"Tailwind"</span>],
-                        </div>
-                        <div class="ml-8 mb-1"><span class="text-cyan-400">passion</span>: <span
-                                class="text-orange-400">"Créer des interfaces modernes et intuitives"</span></div>
-                        <div class="ml-4 mb-1">};</div>
+                                class="text-orange-400">"JavaScript"</span>,<span class="text-orange-400">
+                                "Node.js"</span>, <span class="text-orange-400"> "Tailwind
+                                CSS"</span> ],</div>
+                        <div class="ml-8 mb-1"><span class="text-cyan-400">projets</span>: [ <span
+                                class="text-orange-400">"Site Portfolio"</span>,<span class="text-orange-400"> "Task
+                                Manager"</span>,<span class="text-orange-400"> "Blog"</span> ],</div>
 
                         <div class="ml-4 mb-1"><span class="text-blue-400">return</span> (</div>
                         <div class="ml-8 mb-1"><span class="text-purple-400">&lt;div</span> <span
-                                class="text-cyan-400">className</span>=<span
-                                class="text-orange-400">"profile"</span><span class="text-purple-400">&gt;</span>
-                        </div>
-                        <div class="ml-12 mb-1">// Informations et sections du CV</div>
+                                class="text-cyan-400">className</span>=<span class="text-orange-400">"cv"</span><span
+                                class="text-purple-400">&gt;</span></div>
+                        <div class="ml-12 mb-1"><span class="text-green-400">&#47;&#47; Mon CV interactif</span></div>
                         <div class="ml-8 mb-1"><span class="text-purple-400">&lt;/div&gt;</span></div>
                         <div class="ml-4 mb-1">);</div>
                         <div class="mb-1">};</div>
 
                         <div class="mb-1"><span class="text-blue-400">export</span> <span
-                                class="text-blue-400">default</span> <span class="text-green-400">Developer</span>;
-                        </div>
+                                class="text-blue-400">default</span> <span class="text-green-400">CV</span>;</div>
                     </div>
                 </div>
 
@@ -272,7 +268,7 @@
                 <div class="notebook-cover"></div>
                 <div class="notebook-spine"></div>
 
-                <!-- Binding rings -->
+                <!-- Anneaux de reliure -->
                 <div class="notebook-ring"></div>
                 <div class="notebook-ring"></div>
                 <div class="notebook-ring"></div>
@@ -280,7 +276,7 @@
                 <div class="notebook-ring"></div>
                 <div class="notebook-ring"></div>
 
-                <!-- Left page -->
+                <!-- Page gauche -->
                 <div class="notebook-page-left">
                     <div class="notebook-title">PARCOURS PROFESSIONNEL</div>
                     <div class="experience-item experience-strikethrough">Paysagiste (2014-2015)</div>
@@ -289,14 +285,14 @@
                     <div class="experience-item experience-highlight">Développeur Web (2022-Présent)</div>
 
                     <div class="notebook-section">
-                        <div class="notebook-section-title">Outils maîtrisés</div>
-                        <div class="notebook-section-item">VS Code</div>
-                        <div class="notebook-section-item">Git & GitHub</div>
-                        <div class="notebook-section-item">Figma</div>
+                        <div class="notebook-section-title">Projets principaux</div>
+                        <div class="notebook-section-item">Portfolio personnel</div>
+                        <div class="notebook-section-item">Application météo</div>
+                        <div class="notebook-section-item">Gestionnaire de tâches</div>
                     </div>
                 </div>
 
-                <!-- Right page -->
+                <!-- Page droite -->
                 <div class="notebook-page-right">
                     <div class="notebook-title">FORMATION</div>
                     <div class="notebook-section">
@@ -317,7 +313,7 @@
                     </div>
                 </div>
 
-                <!-- Post-its -->
+                <!-- Post-its (conservés, mais positions ajustées) -->
                 <div class="post-it post-it-1">
                     <div class="post-it-title">VEILLE TECHNO</div>
                     <div class="post-it-content">
@@ -327,11 +323,10 @@
                     </div>
                 </div>
                 <div class="post-it post-it-2">
-                    <div class="post-it-title">SOFT SKILLS</div>
+                    <div class="post-it-title">PASSION</div>
                     <div class="post-it-content">
-                        Autonomie<br />
-                        Créativité<br />
-                        Adaptabilité
+                        UI/UX Design<br>
+                        Open Source
                     </div>
                 </div>
                 <div class="post-it post-it-3">
@@ -343,6 +338,7 @@
                     </div>
                 </div>
 
+                <!-- Tabs conservés -->
                 <div class="notebook-tabs">
                     <div class="notebook-tab notebook-tab-1"></div>
                     <div class="notebook-tab notebook-tab-2"></div>
@@ -431,6 +427,32 @@
             <div class="title-banner">
                 <div class="title-name fullname-span"></div>
                 <div class="title-role">Développeur React</div>
+            </div>
+        </div>
+
+        <div class="tools-postit-container">
+            <div class="tools-postit">
+                <div class="pin pin-violet"></div>
+                <div class="pin pin-violet-2"></div>
+                <div class="tools-postit-title">OUTILS MAÎTRISÉS</div>
+                <div class="tools-item"><span class="tools-dot"></span>VS Code</div>
+                <div class="tools-item"><span class="tools-dot"></span>Git & GitHub</div>
+                <div class="tools-item"><span class="tools-dot"></span>Figma</div>
+                <div class="tools-item"><span class="tools-dot"></span>NPM/Yarn</div>
+                <div class="tools-item"><span class="tools-dot"></span>Webpack</div>
+            </div>
+        </div>
+
+        <!-- Post-it pour les soft skills -->
+        <div class="skills-postit-container">
+            <div class="skills-postit">
+                <div class="pin pin-yellow"></div>
+                <div class="pin pin-yellow-2"></div>
+                <div class="skills-postit-title">SOFT SKILLS</div>
+                <div class="skills-item"><span class="skills-dot"></span>Autonomie</div>
+                <div class="skills-item"><span class="skills-dot"></span>Créativité</div>
+                <div class="skills-item"><span class="skills-dot"></span>Adaptabilité</div>
+                <div class="skills-item"><span class="skills-dot"></span>Veille techno</div>
             </div>
         </div>
 

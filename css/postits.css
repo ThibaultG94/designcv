@@ -1,0 +1,157 @@
+/* Post-its supplémentaires pour les outils et compétences */
+.tools-postit-container {
+    position: absolute;
+    top: 60mm;
+    right: 50mm;
+    z-index: 18;
+    transform-style: preserve-3d;
+}
+
+.tools-postit {
+    position: absolute;
+    width: 150px;
+    height: 220px;
+    background-color: #c4b5fd;
+    /* Violet clair */
+    background-image: url("https://www.transparenttextures.com/patterns/paper.png");
+    transform: perspective(800px) rotateX(15deg) rotateZ(-4deg);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), 0 0 1px rgba(0, 0, 0, 0.1) inset;
+    padding: 12px;
+    color: #1a202c;
+    font-family: 'Caveat', cursive;
+    transform-style: preserve-3d;
+}
+
+.tools-postit::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(45deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0) 80%,
+            rgba(255, 255, 255, 0.1) 100%);
+    pointer-events: none;
+}
+
+.tools-postit-title {
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding-left: 7px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    text-align: center;
+    border-bottom: 1px dashed #6d28d9;
+}
+
+.tools-item {
+    font-size: 15px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.tools-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #6d28d9;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+/* Post-it pour les Soft Skills */
+.skills-postit-container {
+    position: absolute;
+    top: 121mm;
+    right: 40mm;
+    z-index: 18;
+    transform-style: preserve-3d;
+}
+
+.skills-postit {
+    position: absolute;
+    width: 150px;
+    height: 160px;
+    background-color: #fde68a;
+    background-image: url("https://www.transparenttextures.com/patterns/paper.png");
+    transform: perspective(800px) rotateX(15deg) rotateZ(5deg);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), 0 0 1px rgba(0, 0, 0, 0.1) inset;
+    padding: 12px;
+    color: #1a202c;
+    font-family: 'Caveat', cursive;
+    transform-style: preserve-3d;
+}
+
+.skills-postit::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(45deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0) 80%,
+            rgba(255, 255, 255, 0.1) 100%);
+    pointer-events: none;
+}
+
+.skills-postit-title {
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding-left: 7px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    text-align: center;
+    border-bottom: 1px dashed #d97706;
+}
+
+.skills-item {
+    font-size: 15px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.skills-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #d97706;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+/* Punaises spécifiques pour les nouveaux post-its */
+.pin-violet {
+    top: 6px;
+    left: 10px;
+    background-color: #7c3aed;
+    transform: translateZ(1px);
+}
+
+.pin-violet-2 {
+    top: 6px;
+    right: 15px;
+    background-color: #7c3aed;
+    transform: translateZ(1px);
+}
+
+.pin-yellow {
+    top: 6px;
+    left: 10px;
+    background-color: #f59e0b;
+    transform: translateZ(1px);
+}
+
+.pin-yellow-2 {
+    top: 6px;
+    right: 15px;
+    background-color: #f59e0b;
+    transform: translateZ(1px);
+}
