@@ -1,4 +1,3 @@
-/* Style pour les documents/papiers de projets */
 .documents-container {
     position: absolute;
     bottom: 60mm;
@@ -100,7 +99,7 @@
 /* Notes papillon collantes pour les liens et contact */
 .sticky-notes-container {
     position: absolute;
-    top: 50mm;
+    top: 45mm;
     left: 30%;
     z-index: 18;
     transform-style: preserve-3d;
@@ -114,6 +113,7 @@
     padding: 10px;
     color: #1a202c;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: 'Caveat', cursive; */
     transform-style: preserve-3d;
 }
 
@@ -199,7 +199,6 @@
     padding: 15px;
     color: #1a202c;
     font-family: 'Caveat', cursive;
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     transform: perspective(1000px) rotateX(2deg);
     transition: all 0.3s ease;
 }
@@ -235,7 +234,7 @@
 
 .wall-postit-title {
     font-weight: bold;
-    font-size: 14px;
+    font-size: 17px;
     margin-bottom: 10px;
     text-align: center;
     border-bottom: 1px dashed #d97706;
@@ -243,7 +242,7 @@
 }
 
 .skill-item {
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 5px;
     display: flex;
     align-items: center;

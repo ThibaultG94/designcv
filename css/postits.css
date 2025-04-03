@@ -1,8 +1,7 @@
-/* Post-its supplémentaires pour les outils et compétences */
 .tools-postit-container {
     position: absolute;
-    top: 60mm;
-    right: 50mm;
+    top: 75mm;
+    left: -1mm;
     z-index: 18;
     transform-style: preserve-3d;
 }
@@ -10,9 +9,8 @@
 .tools-postit {
     position: absolute;
     width: 150px;
-    height: 220px;
+    height: 200px;
     background-color: #c4b5fd;
-    /* Violet clair */
     background-image: url("https://www.transparenttextures.com/patterns/paper.png");
     transform: perspective(800px) rotateX(15deg) rotateZ(-4deg);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), 0 0 1px rgba(0, 0, 0, 0.1) inset;
@@ -66,8 +64,8 @@
 /* Post-it pour les Soft Skills */
 .skills-postit-container {
     position: absolute;
-    top: 121mm;
-    right: 40mm;
+    top: 100mm;
+    right: 30mm;
     z-index: 18;
     transform-style: preserve-3d;
 }
