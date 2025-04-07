@@ -1,0 +1,211 @@
+.laptop-keyboard {
+    position: absolute;
+    bottom: -220px;
+    left: 0;
+    right: 0;
+    height: 220px;
+    background: #111111;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 12px 15px;
+    z-index: 2;
+    transform-style: preserve-3d;
+    transform: rotateX(5deg);
+    transform-origin: top center;
+}
+
+.keyboard-keys {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 4px;
+    /* height: 10px; */
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+/* First row - function keys */
+.keyboard-row-1 {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+/* Second row - numbers */
+.keyboard-row-2 {
+    display: grid;
+    grid-template-columns: 1fr repeat(12, 1fr) 2fr;
+    gap: 4px;
+    margin-bottom: 4px;
+}
+
+/* Third row - QWERTY first line */
+.keyboard-row-3 {
+    display: grid;
+    grid-template-columns: 1.5fr repeat(12, 1fr) 1.5fr;
+    gap: 4px;
+    margin-bottom: 4px;
+}
+
+/* Fourth row - ASDF */
+.keyboard-row-4 {
+    display: grid;
+    grid-template-columns: 1.8fr repeat(11, 1fr) 2.2fr;
+    gap: 4px;
+    margin-bottom: 4px;
+}
+
+/* Fifth row - ZXCV */
+.keyboard-row-5 {
+    display: grid;
+    grid-template-columns: 2.2fr repeat(10, 1fr) 2.8fr 1fr;
+    gap: 4px;
+    margin-bottom: 4px;
+}
+
+/* Sixth row - space and special keys */
+.keyboard-row-6 {
+    display: grid;
+    grid-template-columns: 1.3fr 1.3fr 1.3fr 1.3fr 6fr 1.3fr 1.3fr 1fr 1fr 1fr;
+    gap: 4px;
+}
+
+.keyboard-key {
+    background: #222222;
+    border-radius: 3px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+        0 1px 1px rgba(0, 0, 0, 0.7),
+        0 1px 0 rgba(255, 255, 255, 0.05) inset;
+    border: 1px solid #000000;
+    padding: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    height: 100%;
+}
+
+.keyboard-key img {
+    max-height: 17px;
+}
+
+/* Special keys */
+.keyboard-key.key-esc {
+    font-size: 6px;
+}
+
+.keyboard-key.key-fn {
+    background: linear-gradient(to bottom, #333333, #222222);
+}
+
+.key-js {
+    background: linear-gradient(to bottom, #222222, #1a1a1a);
+    border-top: 1px solid #f7df1e;
+    color: #f7df1e;
+}
+
+.key-node {
+    background: linear-gradient(to bottom, #222222, #1a1a1a);
+    border-top: 1px solid #68a063;
+    color: #68a063;
+}
+
+.key-html {
+    background: linear-gradient(to bottom, #222222, #1a1a1a);
+    border-top: 1px solid #e34c26;
+    color: #e34c26;
+}
+
+.key-css {
+    background: linear-gradient(to bottom, #222222, #1a1a1a);
+    border-top: 1px solid #264de4;
+    color: #264de4;
+}
+
+.key-tw {
+    background: linear-gradient(to bottom, #222222, #1a1a1a);
+    border-top: 1px solid #06b6d4;
+    color: #06b6d4;
+}
+
+.key-space {
+    background: #1d1d1d;
+    border-radius: 3px;
+    box-shadow:
+        0 1px 1px rgba(0, 0, 0, 0.7),
+        0 1px 0 rgba(255, 255, 255, 0.05) inset;
+    border: 1px solid #000000;
+}
+
+/* Touchpad */
+.laptop-touchpad {
+    position: absolute;
+    width: 25%;
+    height: 45px;
+    background: #1a1a1a;
+    border: 1px solid #000000;
+    border-radius: 1px;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    z-index: 3;
+    overflow: hidden;
+}
+
+.touchpad-buttons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 12px;
+    display: flex;
+}
+
+.touchpad-button-left,
+.touchpad-button-right {
+    flex: 1;
+    height: 100%;
+    background: #1d1d1d;
+    border-top: 1px solid #111;
+}
+
+.touchpad-button-left {
+    border-right: 1px solid #111;
+}
+
+.touchpad-logo {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: 40%;
+    height: 40%;
+    background-image: url('../img/tailwind-css.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.75;
+    z-index: 1;
+}
+
+.touchpad-shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to bottom,
+            rgba(255, 255, 255, 0.05) 0%,
+            rgba(255, 255, 255, 0) 100%);
+    z-index: 2;
+}
+
+.laptop-touchpad:hover .touchpad-logo {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}

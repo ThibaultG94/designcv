@@ -12,6 +12,7 @@
     <!-- Element-specific styles -->
     <link rel="stylesheet" href="css/table.css">
     <link rel="stylesheet" href="css/laptop.css">
+    <link rel="stylesheet" href="css/keyboard.css">
     <link rel="stylesheet" href="css/photo.css">
     <link rel="stylesheet" href="css/coffee.css">
     <link rel="stylesheet" href="css/mouse.css">
@@ -19,6 +20,7 @@
     <link rel="stylesheet" href="css/documents.css">
     <link rel="stylesheet" href="css/title.css">
     <link rel="stylesheet" href="css/postits.css">
+    <link rel="stylesheet" href="css/tablets.css">
 </head>
 
 <body class="bg-gray-700">
@@ -37,56 +39,99 @@
         <div class="laptop-container">
             <div class="laptop">
                 <div class="laptop-screen">
-                    <div class="code text-left p-2">
-                        <div class="mb-0.5"><span class="text-purple-400">import</span> <span
-                                class="text-red-400">React</span> <span class="text-purple-400">from</span> <span
-                                class="text-green-400">'react'</span>;</div>
+                    <div class="screen-header">
+                        <div class="window-controls">
+                            <span class="control close"></span>
+                            <span class="control minimize"></span>
+                            <span class="control maximize"></span>
+                        </div>
+                        <div class="window-title">Parcours Professionnel.js</div>
+                    </div>
+                    <div class="code-content">
+                        <div class="line-numbers">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                            <span>6</span>
+                            <span>7</span>
+                            <span>8</span>
+                            <span>9</span>
+                            <span>10</span>
+                            <span>11</span>
+                            <span>12</span>
+                            <span>13</span>
+                            <span>14</span>
+                            <span>15</span>
+                            <span>16</span>
+                            <span>17</span>
+                            <span>18</span>
+                            <span>19</span>
+                            <span>20</span>
+                            <span>21</span>
+                            <span>22</span>
+                        </div>
+                        <div class="code-lines">
+                            <div class="code-line"><span class="text-purple-400">import</span> <span
+                                    class="text-cyan-400">React</span> <span class="text-purple-400">from</span> <span
+                                    class="text-green-400">'react'</span>;</div>
 
-                        <div class="mb-0.5"><span class="text-purple-400">const</span> <span class="text-blue-400">CV
-                                =</span> <span class="text-orange-400">()</span><span class="text-purple-400"> =>
-                            </span><span class="text-orange-400">{</span></div>
+                            <div class="code-line"><span class="text-purple-400">const</span> <span
+                                    class="text-yellow-400">experiences</span> <span class="text-blue-400">=</span>
+                                <span class="text-cyan-400">[</span>
+                            </div>
 
-                        <div class="ml-4 mb-0.5"><span class="text-purple-400">const</span> <span
-                                class="text-yellow-400">profil</span> <span class="text-blue-400">=</span> <span
-                                class="text-purple-400">{</span></div>
-                        <div class="ml-8 mb-0.5"><span class="text-red-400">nom</span>: <span
-                                class="text-green-400 fullname-span"></span>,</div>
-                        <div class="ml-8 mb-0.5"><span class="text-red-400">poste</span>: <span class="text-green-400">
-                                "Développeur Front-end React"</span>,</div>
-                        <div class="ml-8 mb-0.5"><span class="text-red-400">compétences</span>: <span
-                                class="text-cyan-400">[</span> <span class=" text-green-400">"React"</span>, <span
-                                class="text-green-400">"JavaScript"</span>,<span class="text-green-400">
-                                "Node.js"</span>, <span class="text-green-400"> "Tailwind
-                                CSS"</span> <span class="text-cyan-400">]</span>,</div>
-                        <div class="ml-8 mb-0.5"><span class="text-red-400">projets</span>: <span
-                                class="text-cyan-400">[</span> <span class="text-green-400">"Site
-                                Portfolio"</span>,<span class="text-green-400"> "Task
-                                Manager"</span>,<span class="text-green-400"> "Blog"</span> <span
-                                class="text-cyan-400">]</span>,</div>
-                        <div class=" ml-4 mb-0.5"><span class="text-purple-400">}</span>;</div>
+                            <div class="code-line indented"><span class="text-cyan-400">{</span></div>
+                            <div class="code-line double-indented"><span class="text-red-400">poste</span>: <span
+                                    class="text-green-400">"Développeur Web Front-End"</span>,</div>
+                            <div class="code-line double-indented"><span class="text-red-400">periode</span>: <span
+                                    class="text-green-400">"2022 - Présent"</span>,</div>
+                            <div class="code-line double-indented"><span class="text-red-400">description</span>: <span
+                                    class="text-green-400">"Création d'applications React, intégration de maquettes
+                                    responsive avec Tailwind CSS"</span>,</div>
+                            <div class="code-line double-indented"><span class="text-red-400">techno</span>: <span
+                                    class="text-cyan-400">[</span><span class="text-green-400">"React"</span>, <span
+                                    class="text-green-400">"JavaScript"</span>, <span
+                                    class="text-green-400">"Tailwind"</span>, <span
+                                    class="text-green-400">"Node.js"</span><span class="text-cyan-400">]</span></div>
+                            <div class="code-line indented"><span class="text-cyan-400">}</span>,</div>
 
-                        <div class="ml-4 mb-0.5"><span class="text-purple-400">return (</span> </div>
-                        <div class="ml-8 mb-0.5">&lt;<span class="text-red-400">div</span> <span
-                                class="text-orange-400">className</span><span class="text-cyan-400">=</span><span
-                                class="text-green-400">"contact"</span>&gt;</div>
-                        <div class="ml-12 mb-0.5">&lt;<span class="text-red-400">span</span>&gt;Me contacter&lt;<span
-                                class="text-red-400">/span</span>&gt;</div>
-                        <div class="ml-12 mb-0.5">&lt;<span class="text-red-400">a</span> <span
-                                class="text-orange-400">href</span><span class="text-cyan-400">=</span><span
-                                class="text-green-400">"mailto:contact@<span
-                                    class="email-span"></span>.com"</span>&gt;contact@<span
-                                class="email-span"></span>.com&lt;<span class="text-red-400">/a</span>&gt;</div>
-                        <div class="ml-12 mb-0.5">&lt;<span class="text-red-400">a</span> <span
-                                class="text-orange-400">href</span><span class="text-cyan-400">=</span><span
-                                class="text-green-400">"https://www.<span
-                                    class="email-span"></span>.com"</span>&gt;<span
-                                class="email-span"></span>.com&lt;<span class="text-red-400">/a</span>&gt;</div>
-                        <div class="ml-8 mb-0.5">&lt;<span class="text-red-400">/div</span>&gt;</div>
-                        <div class="ml-4 mb-0.5"><span class="text-purple-400">)</span>;</div>
-                        <div class="mb-1"><span class="text-orange-400">}</span>;</div>
+                            <div class="code-line indented"><span class="text-cyan-400">{</span></div>
+                            <div class="code-line double-indented"><span class="text-red-400">poste</span>: <span
+                                    class="text-green-400">"Monteur"</span>,</div>
+                            <div class="code-line double-indented"><span class="text-red-400">periode</span>: <span
+                                    class="text-green-400">"2020 - 2022"</span>,</div>
+                            <div class="code-line double-indented"><span class="text-red-400">description</span>: <span
+                                    class="text-green-400">"Montage de structures métalliques et installation de
+                                    systèmes complexes"</span></div>
+                            <div class="code-line indented"><span class="text-cyan-400">}</span>,</div>
 
-                        <div class="mb-0.5"><span class="text-purple-400">export default</span> <span
-                                class="text-blue-400">CV</span>;</div>
+                            <div class="code-line indented"><span class="text-cyan-400">{</span></div>
+                            <div class="code-line double-indented"><span class="text-red-400">poste</span>: <span
+                                    class="text-green-400">"Géomètre"</span>,</div>
+                            <div class="code-line double-indented"><span class="text-red-400">periode</span>: <span
+                                    class="text-green-400">"2015 - 2020"</span>,</div>
+                            <div class="code-line double-indented"><span class="text-red-400">description</span>: <span
+                                    class="text-green-400">"Relevés topographiques, calculs techniques et création de
+                                    plans précis"</span></div>
+                            <div class="code-line indented"><span class="text-cyan-400">}</span>,</div>
+
+                            <div class="code-line indented"><span class="text-cyan-400">{</span></div>
+                            <div class="code-line double-indented"><span class="text-red-400">poste</span>: <span
+                                    class="text-green-400">"Paysagiste"</span>,</div>
+                            <div class="code-line double-indented"><span class="text-red-400">periode</span>: <span
+                                    class="text-green-400">"2014 - 2015"</span>,</div>
+                            <div class="code-line double-indented"><span class="text-red-400">description</span>: <span
+                                    class="text-green-400">"Aménagement d'espaces verts et entretien de jardins"</span>
+                            </div>
+                            <div class="code-line indented"><span class="text-cyan-400">}</span></div>
+
+                            <div class="code-line"><span class="text-cyan-400">]</span>;</div>
+
+                            <div class="code-line"><span class="text-purple-400">export default</span> <span
+                                    class="text-yellow-400">experiences</span>;</div>
+                        </div>
                     </div>
                 </div>
 
