@@ -1,8 +1,8 @@
 .laptop-container {
     position: absolute;
-    top: 70mm;
-    left: 50%;
-    transform: translateX(-50%) scale(0.8);
+    top: 80mm;
+    left: 45%;
+    transform: translateX(-50%) scale(0.85);
     z-index: 30;
     transform-style: preserve-3d;
     width: 100%;
@@ -95,7 +95,7 @@
 
 .line-numbers {
     width: 30px;
-    padding: 10px 0;
+    padding: 0px 0;
     background-color: #1e1e1e;
     color: #858585;
     text-align: right;
@@ -106,17 +106,15 @@
     display: block;
     padding: 0 5px;
     font-size: 10px;
-    line-height: 18px;
 }
 
 .code-lines {
     flex-grow: 1;
-    padding: 10px;
+    padding: 0 10px;
     overflow: hidden;
 }
 
 .code-line {
-    line-height: 18px;
     white-space: nowrap;
 }
 

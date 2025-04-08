@@ -1,9 +1,9 @@
 .notebook-container {
     position: absolute;
-    bottom: 0mm;
-    right: 8%;
+    top: 220mm;
+    left: 20%;
     z-index: 30;
-    width: 500px;
+    width: 550px;
     height: 350px;
     transform-style: preserve-3d;
     transform: perspective(1000px) rotateX(35deg) rotateZ(0deg) scale(0.85);

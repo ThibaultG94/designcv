@@ -1,10 +1,10 @@
 .tablet-horizontal-container {
     position: absolute;
-    top: 105mm;
-    left: 22%;
-    z-index: 20;
-    width: 200px;
-    height: 140px;
+    top: 222mm;
+    left: 2%;
+    z-index: 40;
+    width: 220px;
+    height: 150px;
     transform-style: preserve-3d;
     perspective: 800px;
 }
@@ -15,9 +15,10 @@
     height: 100%;
     background-color: #f0f0f0;
     border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 5px -10px 15px rgba(0, 0, 0, 0.3);
     transform-style: preserve-3d;
-    transform: perspective(800px) rotateX(5deg) rotateY(0deg);
+    transform: perspective(800px) rotateX(5deg) rotateY(0deg) rotateZ(0deg);
+    /* transform: perspective(800px) rotateX(5deg) rotateY(10deg) rotateZ(-10deg); */
     overflow: hidden;
     z-index: 2;
 }
@@ -89,9 +90,9 @@
 
 .tablet-vertical-container {
     position: absolute;
-    top: 60mm;
-    right: 20%;
-    z-index: 20;
+    top: 190mm;
+    right: 5%;
+    z-index: 40;
     width: 120px;
     height: 180px;
     transform-style: preserve-3d;
@@ -104,7 +105,7 @@
     height: 100%;
     background-color: #f0f0f0;
     border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.4);
     transform-style: preserve-3d;
     transform: perspective(800px) rotateX(5deg) rotateY(0deg);
     overflow: hidden;
