@@ -1,7 +1,7 @@
 .coffee-container {
     position: absolute;
-    top: 155mm;
-    right: 1%;
+    top: 100mm;
+    right: 35%;
     z-index: 15;
     width: 150px;
     height: 200px;
@@ -14,7 +14,7 @@
     width: 180px;
     margin: auto;
     transform-style: preserve-3d;
-    transform: perspective(600px) rotateX(-10deg) rotateY(0deg) scale(.58) translateZ(10px);
+    transform: perspective(600px) rotateX(0deg) rotateY(0deg) scale(.55) translateZ(10px);
     background-color: #f0fcff;
     background-image: url("https://www.transparenttextures.com/patterns/light-aluminum.png");
     border-top-left-radius: 90px 40px;
@@ -92,8 +92,10 @@
     right: 3px;
     bottom: 3px;
     border-radius: inherit;
-    background-color: #96562C;
-    background-image: url("https://www.transparenttextures.com/patterns/wood.png");
+    background-color: #00264f;
+    background-image: url("https://www.transparenttextures.com/patterns/mooning.png");
+    /* background-color: #96562C;
+    background-image: url("https://www.transparenttextures.com/patterns/wood.png"); */
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
     z-index: -1;
 }
@@ -135,10 +137,10 @@
 /* React logo */
 .coffee-logo {
     position: absolute;
-    width: 140px;
-    height: 140px;
-    top: 90px;
-    left: 23px;
+    width: 150px;
+    height: 150px;
+    top: 88px;
+    left: 16px;
     background-image: url('../img/react-logo.svg');
     background-size: contain;
     background-repeat: no-repeat;
