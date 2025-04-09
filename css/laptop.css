@@ -21,7 +21,7 @@
     background-color: #1e1e1e;
     border-radius: 8px 8px 0 0;
     border: 15px solid #090909;
-    aspect-ratio: 16/9;
+    aspect-ratio: 16/10;
     width: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) inset;
     position: relative;
@@ -31,7 +31,7 @@
     overflow: hidden;
     z-index: 1;
     font-family: 'Consolas', 'Courier New', monospace;
-    font-size: 10px;
+    font-size: 11px;
 }
 
 /* Simplified shadow */
@@ -124,35 +124,4 @@
 
 .double-indented {
     padding-left: 40px;
-}
-
-/* Syntax colors for code */
-.text-purple-400 {
-    color: #c586c0;
-    /* Keywords */
-}
-
-.text-green-400 {
-    color: #ce9178;
-    /* Strings */
-}
-
-.text-red-400 {
-    color: #9cdcfe;
-    /* Properties */
-}
-
-.text-yellow-400 {
-    color: #dcdcaa;
-    /* Functions */
-}
-
-.text-blue-400 {
-    color: #9cdcfe;
-    /* Variables */
-}
-
-.text-cyan-400 {
-    color: #569cd6;
-    /* Types */
 }
