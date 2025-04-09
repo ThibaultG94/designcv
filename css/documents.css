@@ -182,7 +182,7 @@
 /* Wall Post-it for skills */
 .wall-postit-container {
     position: absolute;
-    top: 10mm;
+    top: 5mm;
     right: 47mm;
     z-index: 15;
     transform-style: preserve-3d;

@@ -1,6 +1,6 @@
 .tablet-horizontal-container {
     position: absolute;
-    top: 84mm;
+    top: 79mm;
     left: 6%;
     z-index: 20;
     width: 340px;
@@ -83,7 +83,7 @@
 
 .tablet-vertical-container {
     position: absolute;
-    top: 58mm;
+    top: 53mm;
     right: 2%;
     z-index: 20;
     width: 221px;
@@ -244,6 +244,7 @@
 
 ::-webkit-scrollbar {
     width: 6px;
+    height: 6px;
 }
 
 ::-webkit-scrollbar-thumb {

@@ -2,7 +2,7 @@
     position: absolute;
     top: 150mm;
     left: 50%;
-    transform: translateX(-50%) scale(0.9);
+    transform: translateX(-50%) scale(0.93);
     z-index: 30;
     transform-style: preserve-3d;
     width: 100%;
@@ -31,7 +31,7 @@
     overflow: hidden;
     z-index: 1;
     font-family: 'Consolas', 'Courier New', monospace;
-    font-size: 11px;
+    font-size: 10px;
 }
 
 /* Simplified shadow */
@@ -61,23 +61,9 @@
     margin-right: 15px;
 }
 
-.control {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    margin-right: 8px;
-}
-
-.close {
-    background-color: #ff5f57;
-}
-
-.minimize {
-    background-color: #ffbd2e;
-}
-
-.maximize {
-    background-color: #28c940;
+.window-controls img {
+    width: 22px;
+    height: 22px;
 }
 
 .window-title {
@@ -111,7 +97,8 @@
 .code-lines {
     flex-grow: 1;
     padding: 0 10px;
-    overflow: hidden;
+    overflow: auto;
+
 }
 
 .code-line {
