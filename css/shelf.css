@@ -1,0 +1,90 @@
+.tablet-shelf-container {
+    position: absolute;
+    top: 125mm;
+    left: 0;
+    right: 0;
+    height: 25mm;
+    z-index: 10;
+    transform-style: preserve-3d;
+}
+
+.tablet-shelf {
+    position: absolute;
+    width: 220mm;
+    height: 15mm;
+    left: -5mm;
+    bottom: 0;
+    background-color: #8B4513;
+    background-image: url("https://www.transparenttextures.com/patterns/wood.png");
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform-style: preserve-3d;
+    transform: perspective(800px) rotateX(45deg);
+    border-radius: 3px;
+}
+
+/* Shelf front edge */
+.tablet-shelf-edge {
+    position: absolute;
+    height: 8mm;
+    width: 100%;
+    bottom: -8mm;
+    left: 0;
+    background-color: #6b3712;
+    transform-origin: top;
+    transform: rotateX(-90deg);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Shelf supports */
+.tablet-shelf-bracket-left {
+    position: absolute;
+    width: 15mm;
+    height: 20mm;
+    left: 12%;
+    bottom: -27mm;
+    background-color: #444;
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+    transform-style: preserve-3d;
+    transform: perspective(800px) rotateX(0deg);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.tablet-shelf-bracket-right {
+    position: absolute;
+    width: 15mm;
+    height: 20mm;
+    right: 12%;
+    bottom: -27mm;
+    background-color: #444;
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+    transform-style: preserve-3d;
+    transform: perspective(800px) rotateX(0deg);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Vis et détails métalliques sur l'étagère */
+.tablet-shelf::after {
+    content: "";
+    position: absolute;
+    top: 4mm;
+    left: 15%;
+    width: 2mm;
+    height: 2mm;
+    background-color: #777;
+    border-radius: 50%;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.8),
+        inset 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.tablet-shelf::before {
+    content: "";
+    position: absolute;
+    top: 4mm;
+    right: 15%;
+    width: 2mm;
+    height: 2mm;
+    background-color: #777;
+    border-radius: 50%;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.8),
+        inset 0 0 1px rgba(255, 255, 255, 0.5);
+}

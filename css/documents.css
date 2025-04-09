@@ -100,7 +100,7 @@
 .sticky-notes-container {
     position: absolute;
     top: 40mm;
-    left: 30%;
+    left: 25%;
     z-index: 18;
     transform-style: preserve-3d;
 }
