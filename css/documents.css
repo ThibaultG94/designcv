@@ -96,10 +96,10 @@
     color: #1a202c;
 }
 
-/* Notes papillon collantes pour les liens et contact */
+/* Sticky notes for links and contacts */
 .sticky-notes-container {
     position: absolute;
-    top: 45mm;
+    top: 40mm;
     left: 30%;
     z-index: 18;
     transform-style: preserve-3d;

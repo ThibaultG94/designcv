@@ -1,12 +1,12 @@
 .mouse-container {
     position: absolute;
-    top: 255mm;
-    right: -12mm;
+    top: 210mm;
+    right: -7mm;
     z-index: 30;
     width: 120px;
     height: 180px;
     transform-style: preserve-3d;
-    transform: scale(1.25);
+    transform: scale(1.2);
 }
 
 .mouse {
@@ -20,7 +20,7 @@
         inset 0 -2px 5px rgba(0, 0, 0, 0.5),
         inset 0 2px 5px rgba(255, 255, 255, 0.1);
     transform-style: preserve-3d;
-    transform: perspective(130px) rotateX(45deg) rotateY(0deg) rotateZ(-10deg) translateZ(0px);
+    transform: perspective(130px) rotateX(50deg) rotateY(0deg) rotateZ(-10deg) translateZ(0px);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
