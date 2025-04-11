@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const emailValue = firstName.toLowerCase() + lastName.toLowerCase();
   const githubValue = firstName + lastName[0];
   const linkedInValue = `${firstName.toLowerCase()}-${lastName[0].toLowerCase()}`;
+  const linuxValue = firstName.toLowerCase();
 
   const fullNames = document.querySelectorAll(".fullname-span");
   const email = document.querySelectorAll(".email-span");
@@ -14,6 +15,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const location = document.getElementById("location");
   const github = document.getElementById("github");
   const linkedIn = document.getElementById("linkedIn");
+  const linux = document.querySelectorAll(".linux");
 
   fullNames.forEach((fullName) => {
     fullName.textContent = fullNameValue;
@@ -26,4 +28,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   location.textContent = locationValue;
   github.textContent = githubValue;
   linkedIn.textContent = linkedInValue;
+  linux.forEach((name) => {
+    name.textContent = linuxValue;
+  });
 });
