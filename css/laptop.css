@@ -112,3 +112,133 @@
 .double-indented {
     padding-left: 40px;
 }
+
+.terminal-content {
+    height: calc(100% - 25px);
+    overflow-y: auto;
+    padding: 8px;
+    background-color: #0d1117;
+    /* GitHub Dark theme background */
+    color: #e6edf3;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 10px;
+}
+
+.terminal-line {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.terminal-prompt {
+    color: #7ee787;
+    /* Light green */
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.terminal-command {
+    color: #79c0ff;
+    /* Light blue */
+    font-weight: bold;
+}
+
+.terminal-cursor {
+    color: #fff;
+    font-weight: bold;
+    animation: blink 1s infinite;
+    margin-left: 4px;
+}
+
+.terminal-response {
+    margin-bottom: 16px;
+}
+
+.terminal-section {
+    margin: 10px 0 5px 0;
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 2px;
+}
+
+.terminal-section-title {
+    color: #ff7b72;
+    /* Salmon */
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.terminal-item {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 4px 0;
+    align-items: center;
+    padding: 3px 0;
+}
+
+.terminal-date {
+    color: #d2a8ff;
+    /* Purple */
+    width: 105px;
+    font-weight: bold;
+    margin-right: 6px;
+}
+
+.terminal-job {
+    color: #fff;
+    flex: 1;
+    margin-right: 6px;
+}
+
+.terminal-tags {
+    color: #a5d6ff;
+    /* Light blue */
+    font-style: italic;
+    font-size: 9px;
+}
+
+.terminal-details {
+    margin: 10px 0 20px;
+}
+
+.terminal-details-box {
+    background-color: #161b22;
+    /* Darker background for the box */
+    border: 1px solid #30363d;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0;
+    color: #e6edf3;
+    line-height: 1.4;
+    white-space: pre-wrap;
+}
+
+.terminal-details-title {
+    color: #ff7b72;
+    /* Salmon */
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+@keyframes blink {
+
+    0%,
+    49% {
+        opacity: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Remove these selectors as they're no longer needed */
+.code-content,
+.line-numbers,
+.line-numbers span,
+.code-lines,
+.code-line,
+.indented,
+.double-indented {
+    /* Styles will be overridden by the new terminal styles */
+}
