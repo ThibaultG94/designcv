@@ -101,6 +101,9 @@
     height: 100%;
     position: relative;
     border-radius: 3px 3px 0 3px;
+    display: flex;
+    justify-content: end;
+    padding-right: 6px;
 }
 
 .key-enter::after {
@@ -108,7 +111,7 @@
     position: absolute;
     top: 100%;
     right: -2px;
-    height: calc(100% + 6.5px);
+    height: calc(100% + 8px);
     width: 65%;
     background: inherit;
     border-radius: 0 0 3px 3px;
@@ -284,4 +287,10 @@
 .laptop-touchpad:hover .touchpad-logo {
     opacity: 1;
     transition: opacity 0.3s ease;
+}
+
+.del-key {
+    display: flex;
+    justify-content: end;
+    padding-right: 6px;
 }
