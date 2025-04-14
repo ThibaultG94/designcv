@@ -49,17 +49,19 @@
 /* Fourth row - ASDF */
 .keyboard-row-4 {
     display: grid;
-    grid-template-columns: 1.8fr repeat(11, 1fr) 2.2fr;
+    grid-template-columns: 1.8fr repeat(11, 1fr) 1.2fr;
     gap: 4px;
     margin-bottom: 4px;
+    position: relative;
 }
 
 /* Fifth row - ZXCV */
 .keyboard-row-5 {
     display: grid;
-    grid-template-columns: 2.2fr repeat(10, 1fr) 2.8fr 1fr;
+    grid-template-columns: 2.2fr repeat(10, 1fr) 1.8fr;
     gap: 4px;
     margin-bottom: 4px;
+    position: relative;
 }
 
 /* Sixth row - space and special keys */
@@ -91,6 +93,49 @@
     max-height: 17px;
 }
 
+.key-apostrophe {
+    grid-column: 12;
+}
+
+.key-enter {
+    height: 100%;
+    position: relative;
+    border-radius: 3px 3px 0 3px;
+}
+
+.key-enter::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: -2px;
+    height: calc(100% + 6.5px);
+    width: 65%;
+    background: inherit;
+    border-radius: 0 0 3px 3px;
+    box-shadow: inset -2px -2px 1px rgba(0, 0, 0, 0.7);
+}
+
+.key-arrow-left {
+    grid-column: 8;
+}
+
+.key-arrow-down {
+    grid-column: 9;
+}
+
+.key-arrow-right {
+    grid-column: 10;
+}
+
+.key-arrow-up {
+    position: absolute;
+    bottom: -32px;
+    right: 36px;
+    width: calc(1fr - 4px);
+    height: calc(1fr - 4px);
+    z-index: 5;
+}
+
 /* Special keys */
 .special {
     display: flex;
@@ -108,7 +153,7 @@
     display: flex;
     justify-content: end;
     padding-right: 6px;
-
+    width: 40px;
 }
 
 .second-shift img {
