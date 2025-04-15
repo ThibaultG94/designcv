@@ -1,7 +1,7 @@
 .documents-container {
     position: absolute;
-    bottom: 60mm;
-    left: 15mm;
+    bottom: 80mm;
+    left: -3mm;
     z-index: 15;
     width: 180px;
     height: 200px;
