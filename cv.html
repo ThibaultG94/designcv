@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="css/shelf.css">
 </head>
 
-<body class="bg-gray-700">
+<body>
     <div class="a4-container">
         <!-- Picture frame -->
         <div class="photo-frame-container">
@@ -63,7 +63,7 @@
                                 <div class="terminal-item">
                                     <span class="terminal-date">[2022-Présent]</span>
                                     <span class="terminal-job">Formation autodidacte en développement web</span>
-                                    <span class="terminal-tags">React, JavaScript, TailwindCSS, Node.js</span>
+                                    <span class="terminal-tags">React, JavaScript, TailwindCSS</span>
                                 </div>
 
                                 <div class="terminal-section">
@@ -329,8 +329,8 @@
         <div class="tablet-shelf-container">
             <div class="tablet-shelf">
                 <div class="tablet-shelf-edge"></div>
-                <div class="tablet-shelf-bracket-left"></div>
-                <div class="tablet-shelf-bracket-right"></div>
+                <!-- <div class="tablet-shelf-bracket-left"></div>
+                <div class="tablet-shelf-bracket-right"></div> -->
             </div>
         </div>
 
@@ -563,71 +563,78 @@
                 </div>
             </div>
             <div class="document document-1">
-                <div class="document-title">Task Manager</div>
-                <div class="document-date">2024</div>
-                <div class="document-content">
-                    Application de gestion de tâches avec authentification, wordpress et stockage des données sur
-                    MongoDB.
-                </div>
-                <div class="project-tags">
-                    <span class="project-tag tag-react">React</span>
-                    <span class="project-tag tag-js">JavaScript</span>
-                    <span class="project-tag tag-node">Node.js</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Sticky Notes -->
-        <div class="sticky-notes-container">
-            <div class="sticky-note sticky-note-1">
-                <div class="pin pin-1"></div>
-                <div class="pin pin-2"></div>
-                <div class="sticky-note-title">CONTACT</div>
-                <div class="sticky-note-content">
-                    <div class="contact-link">contact@<span class="email-span"></span><br />.com</div>
-                    <div class="contact-link" id="phone"></div>
-                    <div class="contact-link"><span id="location"></span>, France</div>
+                <div class="document-title">
+                    <Task Manager/div>
+                        <div class="document-date">2024</div>
+                        <div class="document-content">
+                            Application de gestion de tâches avec authentification, wordpress et stockage des données
+                            sur
+                            MongoDB.
+                        </div>
+                        <div class="project-tags">
+                            <span class="project-tag tag-react">React</span>
+                            <span class="project-tag tag-js">JavaScript</span>
+                            <span class="project-tag tag-node">Node.js</span>
+                        </div>
                 </div>
             </div>
-            <div class="sticky-note sticky-note-2">
-                <div class="pin pin-3"></div>
-                <div class="sticky-note-title">LIENS</div>
-                <div class="sticky-note-content">
-                    <div class="contact-link">github.com/<span id="github"></span>94</div>
-                    <div class="contact-link">linkedin.com/in/<span id="linkedIn"></span>-10b37a271/</div>
-                    <div class="contact-link"><span class="email-span"></span>.com</div>
+
+            <!-- Sticky Notes -->
+            <div class="sticky-notes-container">
+                <div class="sticky-note sticky-note-1">
+                    <div class="pin pin-1"></div>
+                    <div class="pin pin-2"></div>
+                    <div class="sticky-note-title">CONTACT</div>
+                    <div class="sticky-note-content">
+                        <a class="contact-link" href="mailto:contact@thibaultguilhem.com">contact@<span
+                                class="email-span"></span><br />.com</a>
+                        <a class="contact-link" href="tel:+33642550071"><span id="phone"></span></a>
+                        <address class="contact-link"><span id="location"></span>, France</address>
+                    </div>
+                </div>
+                <div class="sticky-note sticky-note-2">
+                    <div class="pin pin-3"></div>
+                    <div class="sticky-note-title">LIENS</div>
+                    <div class="sticky-note-content">
+                        <a class="contact-link" href="https://github.com/ThibaultG94" target="_blank">github.com/<span
+                                id="github"></span>94</a>
+                        <a class="contact-link" href="https://www.thibaultguilhem.com/" target="_blank"><span
+                                class="email-span"></span>.com</a>
+                        <a class="contact-link" href="https://linkedin.com/in/thibault-g-10b37a271/"
+                            target="_blank">linkedin.com/in/<span id="linkedIn"></span>-10b37a271/</a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Postits -->
-        <div class="wall-postit-container">
-            <div class="wall-postit">
-                <div class="pin pin-4"></div>
-                <div class="pin pin-5"></div>
-                <div class="wall-postit-title">COMPÉTENCES</div>
-                <div class="skill-item"><span class="skill-dot"></span>React (Avancé)</div>
-                <div class="skill-item"><span class="skill-dot"></span>JavaScript ES6+</div>
-                <div class="skill-item"><span class="skill-dot"></span>Tailwind CSS</div>
-                <div class="skill-item"><span class="skill-dot"></span>Node.js</div>
+            <!-- Postits -->
+            <div class="wall-postit-container">
+                <div class="wall-postit">
+                    <div class="pin pin-4"></div>
+                    <div class="pin pin-5"></div>
+                    <div class="wall-postit-title">COMPÉTENCES</div>
+                    <div class="skill-item"><span class="skill-dot"></span>React (Avancé)</div>
+                    <div class="skill-item"><span class="skill-dot"></span>JavaScript ES6+</div>
+                    <div class="skill-item"><span class="skill-dot"></span>Tailwind CSS</div>
+                    <div class="skill-item"><span class="skill-dot"></span>Node.js</div>
+                </div>
+            </div>
+
+            <!-- Title banner -->
+            <div class="title-banner-container">
+                <div class="title-banner">
+                    <div class="title-name fullname-span"></div>
+                    <div class="title-role">Développeur React</div>
+                </div>
+            </div>
+
+            <!-- Wooden table -->
+            <div class="wooden-table">
+                <!-- <hr> -->
+                <!-- <div class="table-reflection"></div> -->
             </div>
         </div>
 
-        <!-- Title banner -->
-        <div class="title-banner-container">
-            <div class="title-banner">
-                <div class="title-name fullname-span"></div>
-                <div class="title-role">Développeur React</div>
-            </div>
-        </div>
-
-        <!-- Wooden table -->
-        <div class="wooden-table">
-            <div class="table-reflection"></div>
-        </div>
-    </div>
-
-    <script src="main.js"></script>
+        <script src="main.js"></script>
 </body>
 
 </html>

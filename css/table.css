@@ -1,13 +1,14 @@
 .wooden-table {
     position: absolute;
+    transform-origin: bottom center;
     bottom: 0;
     left: -400px;
     right: -400px;
     height: 1200px;
     transform: perspective(800px) rotateX(40deg);
-    transform-origin: bottom center;
     background-color: #96562C;
-    background-image: url("https://www.transparenttextures.com/patterns/wood.png");
+    /* background-image: url("https://www.transparenttextures.com/patterns/wood.png"); */
+    background-image: url("/img/wood.png");
     z-index: 1;
     box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
 }
@@ -26,5 +27,35 @@
             rgba(0, 0, 0, 0.2) 2px,
             transparent 2px,
             transparent 140px);
-    opacity: 0.8;
+    opacity: 1;
+    z-index: 2;
+}
+
+.table-line {
+    opacity: 0;
+}
+
+/* // Fais en sorte que la texture et les lignes soient bien affichées lors de l'impression */
+@media print {
+    .wooden-table {
+        transform: perspective(800px) rotateX(34deg) translateZ(-50px);
+    }
+
+    .wooden-table::before {
+        content: '';
+        opacity: 0;
+    }
+
+    .table-line {
+        opacity: 1;
+        position: absolute;
+        border: none;
+        width: 3px;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+        margin: 0;
+        padding: 0;
+        z-index: 3;
+        top: 0;
+    }
 }
