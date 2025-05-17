@@ -5,3 +5,5 @@ node_modules/*
 *.txt
 venv/
 copy/
+motivation.html
+*.pdf

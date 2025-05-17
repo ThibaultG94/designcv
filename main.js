@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  const firstName = "Thibault";
-  const lastName = "Guilhem";
-  const phoneValue = "06 42 55 00 71";
-  const locationValue = "Noisy-le-Grand";
+  const firstName = "Jean";
+  const lastName = "Albert";
+  const phoneValue = "06 24 55 00 17";
+  const locationValue = "Paris";
   const fullNameValue = `${firstName} ${lastName}`;
   const emailValue = firstName.toLowerCase() + lastName.toLowerCase();
   const githubValue = firstName + lastName[0];
@@ -34,10 +34,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const table = document.querySelector(".wooden-table");
   for (let i = 0; i < 10; i++) {
-    // ajuste le nombre selon tes besoins
-    const line = document.createElement("div"); // utiliser div au lieu de hr pour les lignes verticales
+    const line = document.createElement("div");
     line.classList.add("table-line");
-    line.style.left = `${i * 160 + 80}px`; // positionne horizontalement
+    line.style.left = `${i * 160 + 80}px`;
     table.appendChild(line);
   }
 });
